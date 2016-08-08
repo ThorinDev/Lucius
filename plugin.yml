@@ -20,3 +20,7 @@ commands:
     description: Colours your chat!
   colourchat:
     usage: /colourchat Message
+    description: Colours your chat!
+  cc:
+    usage: /cc Message
+   
