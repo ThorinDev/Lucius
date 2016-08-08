@@ -37,17 +37,11 @@ public class Lucius extends JavaPlugin {
 	private void registerPermissions() {
 		PluginManager pm = getServer().getPluginManager();
 		
-		pm.addPermission(luciusMember);
-		pm.addPermission(luciusAdmin);
-		
 		pm.addPermission(luciusCommandFakesay);
 		pm.addPermission(luciusCommandFakesayExcempt);
 		pm.addPermission(luciusCommandFakesayOverride);
 		pm.addPermission(luciusCommandHello);
 	}
-	
-	public Permission luciusMember = new Permission("lucius.member");
-	public Permission luciusAdmin = new Permission("lucius.admin");
 	
 	public Permission luciusCommandHello = new Permission("lucius.hello");
 	public Permission luciusCommandFakesay = new Permission("lucius.fakesay");
