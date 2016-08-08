@@ -13,7 +13,7 @@ public class FakesayCommand implements CommandExecutor {
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if(!(sender instanceof Player)) {
-			sender.sendMessage(ChatColor.RED + "You need to be a player to use this command, " + ChatColor.GREEN + "/" + cmd.getName().toString());
+			sender.sendMessage(ChatColor.RED + "You need to be a player to use the command, " + ChatColor.GREEN + "/" + cmd.getName().toString());
 			return true;
 		}
 		else {
