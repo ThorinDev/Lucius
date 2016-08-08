@@ -20,6 +20,7 @@ public class Lucius extends JavaPlugin {
 		
 		registerCommands();
 		registerPermissions();
+		registerEvents();
 	}
 	
 	@Override
@@ -49,4 +50,7 @@ public class Lucius extends JavaPlugin {
 	public Permission luciusCommandFakesayExcempt = new Permission("lucius.fakesay.excempt");
 	public Permission luciusCommandChatColor = new Permission("lucius.chatcolor");
 	
+	private void registerEvents() {
+		//for future use
+	}
 }
