@@ -62,6 +62,7 @@ public class FakesayCommand implements CommandExecutor {
 			}
 			else {
 				playerThatSent.sendMessage(ChatColor.RED + "You do not have permission to use this command");
+				return true;
 			}
 		}
 		return false;
