@@ -1,7 +1,7 @@
 name: Lucius
 main: com.thorindev.Lucius
 author: ThorinDev
-version: 1.0.0
+version: 1.0.1
 commands:
   hello:
     usage: /hello
