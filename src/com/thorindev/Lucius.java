@@ -3,7 +3,7 @@ package com.thorindev;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.thorindev.commands.HelloCommand;
-import com.thorindev.commands.TalkCommand;
+import com.thorindev.commands.FakesayCommand;
 
 public class Lucius extends JavaPlugin {
 	
@@ -23,7 +23,7 @@ public class Lucius extends JavaPlugin {
 	}
 	private void registerCommands() {
 		getCommand("hello").setExecutor(new HelloCommand()); 
-		getCommand("fakesay").setExecutor(new TalkCommand());
+		getCommand("fakesay").setExecutor(new FakesayCommand());
 	}
 	
 }
