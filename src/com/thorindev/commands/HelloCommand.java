@@ -20,7 +20,7 @@ public class HelloCommand implements CommandExecutor {
 			Player player = (Player) sender;
 			Random random = new Random();
 			
-			int RandomNumber = random.nextInt(3)+1;
+			int RandomNumber = random.nextInt(6)+1;
 			
 			switch(RandomNumber) {
 				case 1:
@@ -31,6 +31,12 @@ public class HelloCommand implements CommandExecutor {
 					break;
 				case 3:
 					player.sendMessage(ChatColor.GREEN + "Peekabo " + player.getDisplayName());
+					break;
+				case 4:
+					player.sendMessage(ChatColor.GREEN + "Bonjour " + player.getDisplayName());
+					break;
+				case 5:
+					player.sendMessage(ChatColor.GREEN + "Hallo " + player.getDisplayName());
 					break;
 			}
 			return true;
