@@ -4,10 +4,14 @@ import org.bukkit.permissions.Permission;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.thorindev.commands.ColorChat;
 import com.thorindev.commands.FakesayCommand;
 import com.thorindev.commands.HelloCommand;
 
 public class Lucius extends JavaPlugin {
+	
+	public boolean isFakesayEnabled;
+	public boolean isHelloEnabled;
 	
 	@Override
 	public void onEnable() {
@@ -25,6 +29,8 @@ public class Lucius extends JavaPlugin {
 		getCommand("hi").setExecutor(new HelloCommand());
 		getCommand("hey").setExecutor(new HelloCommand());
 		getCommand("fakesay").setExecutor(new FakesayCommand());
+		getCommand("colorchat").setExecutor(new ColorChat());
+		getCommand("colourchat").setExecutor(new ColorChat());
 	}
 	
 	
