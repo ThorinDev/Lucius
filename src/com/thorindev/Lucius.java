@@ -2,6 +2,8 @@ package com.thorindev;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.thorindev.commands.*;
+
 public class Lucius extends JavaPlugin {
 
 	@Override
