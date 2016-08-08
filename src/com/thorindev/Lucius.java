@@ -21,7 +21,9 @@ public class Lucius extends JavaPlugin {
 	public void onDisable() {}
 	
 	private void registerCommands() {
-		getCommand("hello").setExecutor(new HelloCommand()); 
+		getCommand("hello").setExecutor(new HelloCommand());
+		getCommand("hi").setExecutor(new HelloCommand());
+		getCommand("hey").setExecutor(new HelloCommand());
 		getCommand("fakesay").setExecutor(new FakesayCommand());
 	}
 	
