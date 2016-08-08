@@ -6,6 +6,13 @@ commands:
   hello:
     usage: /hello
     description: Find out!
+  hi:
+    usage: /hi
+    description: Find out!
+  hey:
+    usage: /hi
+    description: Find out!
   fakesay:
     usage: /fakesay Player Message
     description: Make other people talk, no we are not the CIA
+    
