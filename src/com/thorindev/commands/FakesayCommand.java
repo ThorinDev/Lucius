@@ -46,17 +46,17 @@ public class FakesayCommand implements CommandExecutor {
 							}
 						}
 						else {
-							playerThatSent.sendMessage(ChatColor.RED + "The player you specified " + args[0] + " is not online.");
+							playerThatSent.sendMessage(ChatColor.RED + "The player you specified " + args[0] + " is not online");
 							return true;
 						}
 					}
 					else {
-						playerThatSent.sendMessage(ChatColor.RED + "You need to specify the message.");
+						playerThatSent.sendMessage(ChatColor.RED + "You need to specify the message");
 						return true;
 					}
 				}
 				else {
-					playerThatSent.sendMessage(ChatColor.RED + "You need to specify the player and the message.");
+					playerThatSent.sendMessage(ChatColor.RED + "You need to specify the player and the message");
 					return true;
 				}
 			}
