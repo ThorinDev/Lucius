@@ -41,7 +41,6 @@ public class ColorChat implements CommandExecutor {
 				return true;
 			}
 		}
-		return false;
 	}
 
 }
