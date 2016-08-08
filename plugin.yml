@@ -1,0 +1,8 @@
+name: Lucius
+main: com.thorindev.Lucius
+author: ThorinDev
+version: 1.0.0
+commands:
+  hello:
+    usage: /hello
+    description: Find out!
