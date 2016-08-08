@@ -12,6 +12,7 @@ public class Lucius extends JavaPlugin {
 	
 	public boolean isFakesayEnabled;
 	public boolean isHelloEnabled;
+	PluginManager pm = getServer().getPluginManager();
 	
 	@Override
 	public void onEnable() {
@@ -35,8 +36,6 @@ public class Lucius extends JavaPlugin {
 	
 	
 	private void registerPermissions() {
-		PluginManager pm = getServer().getPluginManager();
-		
 		pm.addPermission(luciusCommandFakesay);
 		pm.addPermission(luciusCommandFakesayExcempt);
 		pm.addPermission(luciusCommandFakesayOverride);
