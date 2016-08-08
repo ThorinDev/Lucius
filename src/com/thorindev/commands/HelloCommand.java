@@ -38,6 +38,9 @@ public class HelloCommand implements CommandExecutor {
 				case 5:
 					player.sendMessage(ChatColor.GREEN + "Hallo " + player.getDisplayName());
 					break;
+				case 6:
+					player.sendMessage(ChatColor.GREEN + "Hallo " + player.getDisplayName());
+					break;
 			}
 			return true;
 		}
