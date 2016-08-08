@@ -5,7 +5,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.thorindev.commands.*;
 
 public class Lucius extends JavaPlugin {
-
+	
 	@Override
 	public void onEnable() {
 		getLogger().info("Lucius Made By ThorinDev");
@@ -13,6 +13,7 @@ public class Lucius extends JavaPlugin {
 		registerPermissions();
 		registerCommands();
 	}
+	
 	@Override
 	public void onDisable() {}
 	
