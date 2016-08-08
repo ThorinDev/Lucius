@@ -29,14 +29,16 @@ public class ColorChat implements CommandExecutor {
 					}
 					
 					player.chat(Message);
-					
+					return true;
 				}
 				else {
 					player.sendMessage(ChatColor.RED + "You need to say what you want to say");
+					return true;
 				}
 			}
 			else {
 				player.sendMessage(ChatColor.RED + "You do not have permission to use this command");
+				return true;
 			}
 		}
 		return false;
