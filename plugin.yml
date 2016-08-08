@@ -17,7 +17,6 @@ commands:
     description: Make other people talk, no we are not the CIA
   colorchat:
     usage: /colorchat Message
-    description: Turns your regular chat into coloured and other formatting things!
+    description: Colours your chat!
   colourchat:
     usage: /colourchat Message
-    description: Turns your regular chat into coloured and other formatting things! But you spell colour correctly
