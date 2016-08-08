@@ -1,6 +1,7 @@
 package com.thorindev;
 
 import org.bukkit.permissions.Permission;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.thorindev.commands.FakesayCommand;
@@ -12,19 +13,23 @@ public class Lucius extends JavaPlugin {
 	public void onEnable() {
 		getLogger().info("Lucius Made By ThorinDev");
 		
-		registerPermissions();
 		registerCommands();
+		registerPermissions();
 	}
 	
 	@Override
 	public void onDisable() {}
 	
-	private void registerPermissions() {
-		
-	}
 	private void registerCommands() {
 		getCommand("hello").setExecutor(new HelloCommand()); 
 		getCommand("fakesay").setExecutor(new FakesayCommand());
+	}
+	
+	
+	private void registerPermissions() {
+		PluginManager pm = getServer().getPluginManager();
+		pm.addPermission(Permission.*);
+		
 	}
 	
 	public Permission luciusMember = new Permission("lucius.member");
