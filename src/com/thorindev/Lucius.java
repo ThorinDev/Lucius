@@ -48,7 +48,14 @@ public class Lucius extends JavaPlugin {
 	public Permission luciusCommandFakesay = new Permission("lucius.fakesay");
 	public Permission luciusCommandFakesayOverride = new Permission("lucius.fakesay.override");
 	public Permission luciusCommandFakesayExcempt = new Permission("lucius.fakesay.excempt");
+	
 	public Permission luciusCommandChatColor = new Permission("lucius.chatcolor");
+	public Permission luciusCommandChatColorBold = new Permission("lucius.chatcolor.bold");
+	public Permission luciusCommandChatColorUnderline = new Permission("lucius.chatcolor.underline");
+	public Permission luciusCommandChatColorItallic = new Permission("lucius.chatcolor.itallic");
+	public Permission luciusCommandChatColorMagic = new Permission("lucius.chatcolor.magic");
+	public Permission luciusCommandChatColorStrike = new Permission("lucius.chatcolor.strike");
+	
 	
 	private void registerEvents() {
 		//for future use
