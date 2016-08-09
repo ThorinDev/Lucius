@@ -32,7 +32,7 @@ public class ColorChat implements CommandExecutor {
 							player.chat(Message);
 						}
 						else {
-							player.sendMessage(ChatColor.RED + "You do not have permission to use bold lettering");
+							player.sendMessage(ChatColor.RED + "You do not have permission to use bold formatting");
 						}
 					}
 					else if(Message.contains("ChatColor.UNDERLINE")) {
@@ -40,7 +40,7 @@ public class ColorChat implements CommandExecutor {
 							player.chat(Message);
 						}
 						else {
-							player.sendMessage(ChatColor.RED + "You do not have permission to use underline lettering");
+							player.sendMessage(ChatColor.RED + "You do not have permission to use underline formatting");
 						}
 					}
 					else if(Message.contains("ChatColor.ITALLIC")) {
