@@ -36,16 +36,36 @@ public class ColorChat implements CommandExecutor {
 						}
 					}
 					else if(Message.contains("ChatColor.UNDERLINE")) {
-						
+						if(player.hasPermission("lucius.chatcolor.bold")) {
+							player.chat(Message);
+						}
+						else {
+							player.sendMessage(ChatColor.RED + "You do not have permission to use bold lettering");
+						}
 					}
 					else if(Message.contains("ChatColor.ITALLIC")) {
-						
+						if(player.hasPermission("lucius.chatcolor.bold")) {
+							player.chat(Message);
+						}
+						else {
+							player.sendMessage(ChatColor.RED + "You do not have permission to use bold lettering");
+						}	
 					}
 					else if(Message.contains("ChatColor.MAGIC")){
-						
+						if(player.hasPermission("lucius.chatcolor.bold")) {
+							player.chat(Message);
+						}
+						else {
+							player.sendMessage(ChatColor.RED + "You do not have permission to use bold lettering");
+						}
 					}
 					else if(Message.contains("ChatColor.STRIKETHROUGH")) {
-						
+						if(player.hasPermission("lucius.chatcolor.bold")) {
+							player.chat(Message);
+						}
+						else {
+							player.sendMessage(ChatColor.RED + "You do not have permission to use bold lettering");
+						}
 					}
 					else {
 						
