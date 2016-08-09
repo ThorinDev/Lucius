@@ -60,11 +60,11 @@ public class ColorChat implements CommandExecutor {
 						}
 					}
 					else if(Message.contains("ChatColor.STRIKETHROUGH")) {
-						if(player.hasPermission("lucius.chatcolor.bold")) {
+						if(player.hasPermission("lucius.chatcolor.strike")) {
 							player.chat(Message);
 						}
 						else {
-							player.sendMessage(ChatColor.RED + "You do not have permission to use bold lettering");
+							player.sendMessage(ChatColor.RED + "You do not have permission to use strikethrough formatting");
 						}
 					}
 					else {
