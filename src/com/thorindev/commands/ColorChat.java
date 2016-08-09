@@ -20,7 +20,6 @@ public class ColorChat implements CommandExecutor {
 			
 			if(player.hasPermission("lucius.colorchat")) {
 				if(args.length >= 1) {
-					
 					String Message = "";
 					for (String argument : args) {
 						Message += argument;
