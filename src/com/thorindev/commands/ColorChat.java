@@ -28,6 +28,7 @@ public class ColorChat implements CommandExecutor {
 					}
 					
 					player.chat(Message);
+						else {
 					return true;
 				}
 				else {
