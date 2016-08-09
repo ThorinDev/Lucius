@@ -20,4 +20,5 @@ commands:
     description: Colors your chat!
   cc:
     usage: /cc Message
-   
+  fw:
+    usage: /fw

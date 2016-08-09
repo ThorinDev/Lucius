@@ -33,6 +33,7 @@ public class Lucius extends JavaPlugin {
 		getCommand("fakesay").setExecutor(new FakesayCommand());
 		getCommand("colorchat").setExecutor(new ColorChat());
 		getCommand("cc").setExecutor(new ColorChat());
+		getCommand("fw").setExecutor(new FWCommand());
 	}
 	
 	private void registerPermissions() {
@@ -67,4 +68,5 @@ public class Lucius extends JavaPlugin {
 	private void registerEvents() {
 		//for future use
 	}
+	
 }
