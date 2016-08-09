@@ -35,7 +35,6 @@ public class Lucius extends JavaPlugin {
 		getCommand("cc").setExecutor(new ColorChat());
 	}
 	
-	
 	private void registerPermissions() {
 		pm.addPermission(luciusCommandHello);
 		
