@@ -1,4 +1,4 @@
-package com.thorindev;
+package com.thorindev.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
