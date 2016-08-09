@@ -37,11 +37,12 @@ public class Lucius extends JavaPlugin {
 	
 	
 	private void registerPermissions() {
+		pm.addPermission(luciusCommandHello);
+		
 		pm.addPermission(luciusCommandFakesay);
 		pm.addPermission(luciusCommandFakesayExcempt);
 		pm.addPermission(luciusCommandFakesayOverride);
-		pm.addPermission(luciusCommandHello);
-		
+
 		pm.addPermission(luciusCommandChatColor);
 	}
 	
