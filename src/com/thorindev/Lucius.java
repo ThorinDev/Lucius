@@ -38,8 +38,6 @@ public class Lucius extends JavaPlugin {
 	}
 	
 	private void registerPermissions() {
-		pm.addPermission(luciusCommandHello);
-		
 		pm.addPermission(luciusCommandFakesay);
 		pm.addPermission(luciusCommandFakesayExcempt);
 		pm.addPermission(luciusCommandFakesayOverride);
@@ -51,9 +49,7 @@ public class Lucius extends JavaPlugin {
 		pm.addPermission(luciusCommandChatColorMagic);
 		pm.addPermission(luciusCommandChatColorStrike);
 	}
-	
-	public Permission luciusCommandHello = new Permission("lucius.hello");
-	
+
 	public Permission luciusCommandFakesay = new Permission("lucius.fakesay");
 	public Permission luciusCommandFakesayOverride = new Permission("lucius.fakesay.override");
 	public Permission luciusCommandFakesayExcempt = new Permission("lucius.fakesay.excempt");
