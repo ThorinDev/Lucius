@@ -68,7 +68,7 @@ public class ColorChat implements CommandExecutor {
 						}
 					}
 					else {
-						
+						player.chat(Message);
 					}
 					
 					
