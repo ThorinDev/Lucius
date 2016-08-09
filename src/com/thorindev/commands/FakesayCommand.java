@@ -42,6 +42,7 @@ public class FakesayCommand implements CommandExecutor {
 								}
 								else {
 									playerThatSent.sendMessage(ChatColor.RED + "Sorry you can't make that person talk!");
+									return true;
 								}
 							}
 						}
