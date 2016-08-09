@@ -38,7 +38,7 @@ public class FakesayCommand implements CommandExecutor {
 								if(playerThatSent.hasPermission("lucius.fakesay.override")) {
 									String allArgs = sb.toString().trim();
 									playerToTalk.chat(allArgs);
-									return true;
+									return true;							
 								}
 								else {
 									playerThatSent.sendMessage(ChatColor.RED + "Sorry you can't make that person talk!");
