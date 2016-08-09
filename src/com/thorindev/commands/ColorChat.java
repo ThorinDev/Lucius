@@ -27,8 +27,31 @@ public class ColorChat implements CommandExecutor {
 						Message = ChatColor.translateAlternateColorCodes('&', Message);
 					}
 					
-					player.chat(Message);
+					if(Message.contains("ChatColor.BOLD")) {
+						if(player.hasPermission("lucius.chatcolor.bold")) {
+							player.chat(Message);
+						}
 						else {
+							player.sendMessage(ChatColor.RED + "You do not have permission to use bold lettering");
+						}
+					}
+					else if(Message.contains("ChatColor.UNDERLINE")) {
+						
+					}
+					else if(Message.contains("ChatColor.ITALLIC")) {
+						
+					}
+					else if(Message.contains("ChatColor.MAGIC")){
+						
+					}
+					else if(Message.contains("ChatColor.STRIKETHROUGH")) {
+						
+					}
+					else {
+						
+					}
+					
+					
 					return true;
 				}
 				else {
