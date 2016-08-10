@@ -1,6 +1,6 @@
 #Lucius
 A cosemetics server plugin.  
-###Usage & Help
+##Commands and Permissions
 | Command | Permission | Description |
 |--------------------------------|----------------------------------|------------------------------------------------------------------------------|
 | ```hello``` or ```hi``` | ```none``` | Sends a randomized hello to the player |
