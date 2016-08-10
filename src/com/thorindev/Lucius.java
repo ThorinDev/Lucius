@@ -8,6 +8,7 @@ import com.thorindev.commands.ColorChat;
 import com.thorindev.commands.FWCommand;
 import com.thorindev.commands.FakesayCommand;
 import com.thorindev.commands.HelloCommand;
+import com.thorindev.commands.NickCommand;
 
 public class Lucius extends JavaPlugin {
 	
@@ -35,6 +36,7 @@ public class Lucius extends JavaPlugin {
 		getCommand("colorchat").setExecutor(new ColorChat());
 		getCommand("cc").setExecutor(new ColorChat());
 		getCommand("fw").setExecutor(new FWCommand());
+		getCommand("nick").setExecutor(new NickCommand());
 	}
 	
 	private void registerPermissions() {
