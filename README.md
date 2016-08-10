@@ -3,7 +3,7 @@ A cosemetics server plugin.
 ###Usage & Help
 | Command | Permission | Description |
 |--------------------------------|----------------------------------|------------------------------------------------------------------------------|
-| ```hello``` or ```hi``` | None | Sends a randomized hello to the player |
+| ```hello``` or ```hi``` | ```none``` | Sends a randomized hello to the player |
 | ```fakesay``` | ```lucius.fakesay``` | Allows you to make other player talk |
 |  | ```lucius.fakesay.override``` | Allows you to make excempt players talk! |
 |  | ```lucius.fakesay.excempt``` | Unless the player has ```lucius.fakesay.override``` no one can make you talk |
