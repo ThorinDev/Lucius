@@ -8,12 +8,12 @@ import com.thorindev.commands.ColorChat;
 import com.thorindev.commands.FWCommand;
 import com.thorindev.commands.FakesayCommand;
 import com.thorindev.commands.HelloCommand;
-import com.thorindev.commands.NickCommand;
 
 public class Lucius extends JavaPlugin {
 	
 	public boolean isFakesayEnabled;
 	public boolean isHelloEnabled;
+	
 	PluginManager pm = getServer().getPluginManager();
 	
 	@Override
