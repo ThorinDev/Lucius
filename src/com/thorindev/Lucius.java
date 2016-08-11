@@ -9,8 +9,6 @@ import com.thorindev.commands.FWCommand;
 import com.thorindev.commands.FakesayCommand;
 import com.thorindev.commands.HelloCommand;
 import com.thorindev.commands.NickCommand;
-import com.thorindev.commands.UnVanishCommand;
-import com.thorindev.commands.VanishCommand;
 
 public class Lucius extends JavaPlugin {
 	
