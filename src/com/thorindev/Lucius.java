@@ -12,9 +12,6 @@ import com.thorindev.commands.VanishCommand;
 
 public class Lucius extends JavaPlugin {
 	
-	public boolean isFakesayEnabled;
-	public boolean isHelloEnabled;
-	
 	PluginManager pm = getServer().getPluginManager();
 	
 	@Override
