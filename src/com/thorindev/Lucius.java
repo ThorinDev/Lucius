@@ -21,8 +21,8 @@ public class Lucius extends JavaPlugin {
 		getLogger().info("Lucius Made By ThorinDev");
 		
 		registerCommands();
-		registerPermissions();
 		registerEvents();
+		registerPermissions();
 	}
 	
 	@Override
@@ -36,12 +36,16 @@ public class Lucius extends JavaPlugin {
 		getCommand("colorchat").setExecutor(new ColorChat());
 		getCommand("cc").setExecutor(new ColorChat());
 		getCommand("fw").setExecutor(new FWCommand());
-		getCommand("vanish").setExecutor(new VanishCommand());
-		getCommand("unvanish").setExecutor(new UnVanishCommand());
 		getCommand("nick").setExecutor(new NickCommand());
 	}
 	
+	private void registerEvents() {
+		//for future use
+	}
+	
 	private void registerPermissions() {
+		PluginManager pm = getServer().getPluginManager();
+		
 		pm.addPermission(luciusCommandFakesay);
 		pm.addPermission(luciusCommandFakesayExcempt);
 		pm.addPermission(luciusCommandFakesayOverride);
@@ -53,10 +57,10 @@ public class Lucius extends JavaPlugin {
 		pm.addPermission(luciusCommandChatColorMagic);
 		pm.addPermission(luciusCommandChatColorStrike);
 	}
-
-	public Permission luciusCommandFakesay = new Permission("lucius.fakesay");
-	public Permission luciusCommandFakesayOverride = new Permission("lucius.fakesay.override");
-	public Permission luciusCommandFakesayExcempt = new Permission("lucius.fakesay.excempt");
+	
+	public static Permission luciusCommandFakesay = new Permission("lucius.fakesay");
+	public static Permission luciusCommandFakesayOverride = new Permission("lucius.fakesay.override");
+	public static Permission luciusCommandFakesayExcempt = new Permission("lucius.fakesay.excempt");
 	
 	public Permission luciusCommandChatColor = new Permission("lucius.chatcolor");
 	public Permission luciusCommandChatColorBold = new Permission("lucius.chatcolor.bold");
@@ -66,8 +70,5 @@ public class Lucius extends JavaPlugin {
 	public Permission luciusCommandChatColorStrike = new Permission("lucius.chatcolor.strike");
 	
 	public Permission luciusCommandFW = new Permission("lucius.fw");
-	private void registerEvents() {
-		//for future use
-	}
 	
 }
