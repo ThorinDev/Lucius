@@ -36,7 +36,6 @@ public class Lucius extends JavaPlugin {
 		getCommand("colorchat").setExecutor(new ColorChat());
 		getCommand("cc").setExecutor(new ColorChat());
 		getCommand("fw").setExecutor(new FWCommand());
-		getCommand("nick").setExecutor(new NickCommand());
 	}
 	
 	private void registerEvents() {
