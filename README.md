@@ -1,9 +1,9 @@
 #Lucius
 A cosemetics server plugin.  
-###Usage & Help
+##Commands and Permissions
 | Command | Permission | Description |
 |--------------------------------|----------------------------------|------------------------------------------------------------------------------|
-| ```hello``` or ```hi``` | None | Sends a randomized hello to the player |
+| ```hello``` or ```hi``` | ```none``` | Sends a randomized hello to the player |
 | ```fakesay``` | ```lucius.fakesay``` | Allows you to make other player talk |
 |  | ```lucius.fakesay.override``` | Allows you to make excempt players talk! |
 |  | ```lucius.fakesay.excempt``` | Unless the player has ```lucius.fakesay.override``` no one can make you talk |
@@ -14,8 +14,8 @@ A cosemetics server plugin.
 |  | ```lucius.chatcolor.magic``` | Allows you to make your chat magical |
 |  | ```lucius.chatcolor.strike``` | Allows you to make your chat strikthrough |
 | ```fw``` | ```lucius.fw``` | Currently disabled while I optimize it. But hey its there. |
-|  |  |  |
-|  |  |  |
+| ```vanish``` | ```lucius.vanish```  | Doesn't work yet. |
+| ```unvanish``` | ```lucius.vanish```  | Doesn't work yet.  |
 |  |  |  |
 |  |  |  |
 |  |  |  |
