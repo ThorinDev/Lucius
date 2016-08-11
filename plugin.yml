@@ -5,16 +5,13 @@ version: 1.1.0
 commands:
   hello:
     usage: /hello
-  hi:
-    usage: /hi
-  hey:
-    usage: /hi
+    aliases: ['/hi','/hey']
   fakesay:
     usage: /fakesay Player Message
+    aliases: ['/sudo','/fs']
   colorchat:
     usage: /colorchat Message
-  cc:
-    usage: /cc Message
+    alias: ['/cc','/colourchat']
   fw:
     usage: /fw
   vanish:

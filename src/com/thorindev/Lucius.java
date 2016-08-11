@@ -30,11 +30,8 @@ public class Lucius extends JavaPlugin {
 	
 	private void registerCommands() {
 		getCommand("hello").setExecutor(new HelloCommand());
-		getCommand("hi").setExecutor(new HelloCommand());
-		getCommand("hey").setExecutor(new HelloCommand());
 		getCommand("fakesay").setExecutor(new FakesayCommand());
 		getCommand("colorchat").setExecutor(new ColorChat());
-		getCommand("cc").setExecutor(new ColorChat());
 		getCommand("fw").setExecutor(new FWCommand());
 	}
 	
