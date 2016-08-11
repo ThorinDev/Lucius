@@ -11,7 +11,7 @@ commands:
     aliases: [sudo,fs]
   colorchat:
     usage: /colorchat Message
-    alias: [cc,colourchat]
+    aliases: [cc,colourchat]
   fw:
     usage: /fw
   vanish:
