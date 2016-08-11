@@ -22,3 +22,5 @@ commands:
     usage: /cc Message
   fw:
     usage: /fw
+  vanish:
+    usage: /vanish
