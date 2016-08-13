@@ -5,7 +5,7 @@ import org.bukkit.permissions.Permission;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.thorindev.commands.ColorChat;
+import com.thorindev.commands.ColorChatCommand;
 import com.thorindev.commands.FWCommand;
 import com.thorindev.commands.FakesayCommand;
 import com.thorindev.commands.HelloCommand;
@@ -32,7 +32,7 @@ public class Lucius extends JavaPlugin {
 	private void registerCommands() {
 		getCommand("hello").setExecutor(new HelloCommand(this));
 		getCommand("fakesay").setExecutor(new FakesayCommand(this));
-		getCommand("colorchat").setExecutor(new ColorChat(this));
+		getCommand("colorchat").setExecutor(new ColorChatCommand(this));
 		getCommand("fw").setExecutor(new FWCommand(this));
 		getCommand("vanish").setExecutor(new VanishCommand(this));
 	}
