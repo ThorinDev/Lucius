@@ -80,6 +80,7 @@ public class Lucius extends JavaPlugin {
 		config.addDefault("commands.hello", true);
 		config.addDefault("commands.vanish", true);
 		config.addDefault("messages.noperm", "&cYou do not have permission to use this command");
+		config.addDefault("messages.commanddisabled", "&cCommand Disabled");
 		config.options().copyDefaults(true);
 		
 		saveConfig();
