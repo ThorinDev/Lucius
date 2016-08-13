@@ -38,7 +38,7 @@ public class Lucius extends JavaPlugin {
 	}
 	
 	private void registerEvents() {
-		pm.registerEvents(new VanishCommand(), this);
+		pm.registerEvents(new VanishCommand(this), this);
 	}
 	
 	private void registerPermissions() {
