@@ -1,5 +1,6 @@
 package com.thorindev;
 
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.permissions.Permission;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -13,6 +14,7 @@ import com.thorindev.commands.VanishCommand;
 public class Lucius extends JavaPlugin {
 	
 	PluginManager pm = getServer().getPluginManager();
+	final FileConfiguration config = this.getConfig();
 	
 	@Override
 	public void onEnable() {
