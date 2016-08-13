@@ -5,9 +5,17 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import com.thorindev.Lucius;
+
 import net.md_5.bungee.api.ChatColor;
 
 public class ColorChat implements CommandExecutor {
+	
+	Lucius plugin;
+	 
+	public ColorChat(Lucius instance) {
+		plugin = instance;
+	}
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
