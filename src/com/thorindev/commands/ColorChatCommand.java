@@ -13,7 +13,7 @@ public class ColorChatCommand implements CommandExecutor {
 	
 	Lucius plugin;
 	 
-	public ColorChat(Lucius instance) {
+	public ColorChatCommand(Lucius instance) {
 		plugin = instance;
 	}
 
