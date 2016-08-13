@@ -54,6 +54,9 @@ public class Lucius extends JavaPlugin {
 		pm.addPermission(luciusCommandChatColorItallic);
 		pm.addPermission(luciusCommandChatColorMagic);
 		pm.addPermission(luciusCommandChatColorStrike);
+		
+		pm.addPermission(luciusCommandFW);
+		pm.addPermission(luciusCommandVanish);
 	}
 	
 	public static Permission luciusCommandFakesay = new Permission("lucius.fakesay");
