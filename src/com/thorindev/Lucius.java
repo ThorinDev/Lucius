@@ -23,6 +23,7 @@ public class Lucius extends JavaPlugin {
 		registerCommands();
 		registerEvents();
 		registerPermissions();
+		registerConfig();
 	}
 	
 	@Override
@@ -68,4 +69,6 @@ public class Lucius extends JavaPlugin {
 	
 	public Permission luciusCommandFW = new Permission("lucius.fw");
 	
+	private void registerConfig() {
+	}
 }
