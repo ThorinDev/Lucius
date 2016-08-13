@@ -68,6 +68,7 @@ public class Lucius extends JavaPlugin {
 	public Permission luciusCommandChatColorStrike = new Permission("lucius.chatcolor.strike");
 	
 	public Permission luciusCommandFW = new Permission("lucius.fw");
+	public Permission luciusCommandVanish = new Permission("lucius.vanish");
 	
 	private void registerConfig() {
 		config.addDefault("commands.colorchat", true);
