@@ -59,5 +59,6 @@ public class HelloCommand implements CommandExecutor {
 				player.sendMessage(ChatColor.RED + "Command Disabled. :(");
 			}
 		}
+		return false;
 	}
 }
