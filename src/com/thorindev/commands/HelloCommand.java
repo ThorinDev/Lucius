@@ -27,8 +27,8 @@ public class HelloCommand implements CommandExecutor {
 			return true;
 		}
 		else {
+			Player player = (Player) sender;
 			if(plugin.getConfig().getBoolean("commands.hello") == true) {
-				Player player = (Player) sender;
 				Random random = new Random();
 				
 				int RandomNumber = random.nextInt(6)+1;
@@ -54,6 +54,9 @@ public class HelloCommand implements CommandExecutor {
 						break;
 				}
 				return true;
+			}
+			else {
+				player.sendMessage(ChatColor.RED + "Command Disabled. :(");
 			}
 		}
 	}
