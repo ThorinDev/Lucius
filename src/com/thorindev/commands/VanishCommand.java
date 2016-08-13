@@ -12,11 +12,20 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
+import com.thorindev.Lucius;
+
 import net.md_5.bungee.api.ChatColor;
 
 public class VanishCommand implements CommandExecutor, Listener {
 	
 	public static ArrayList<Player> vanished = new ArrayList<Player>();
+	
+	Lucius plugin;
+	 
+	public VanishCommand(Lucius instance) {
+		plugin = instance;
+	}
+
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
