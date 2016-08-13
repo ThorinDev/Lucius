@@ -30,11 +30,11 @@ public class Lucius extends JavaPlugin {
 	public void onDisable() {}
 	
 	private void registerCommands() {
-		getCommand("hello").setExecutor(new HelloCommand());
-		getCommand("fakesay").setExecutor(new FakesayCommand());
-		getCommand("colorchat").setExecutor(new ColorChat());
-		getCommand("fw").setExecutor(new FWCommand());
-		getCommand("vanish").setExecutor(new VanishCommand());
+		getCommand("hello").setExecutor(new HelloCommand(this));
+		getCommand("fakesay").setExecutor(new FakesayCommand(this));
+		getCommand("colorchat").setExecutor(new ColorChat(this));
+		getCommand("fw").setExecutor(new FWCommand(this));
+		getCommand("vanish").setExecutor(new VanishCommand(this));
 	}
 	
 	private void registerEvents() {
