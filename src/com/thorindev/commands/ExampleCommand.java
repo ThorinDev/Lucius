@@ -13,7 +13,7 @@ public class ExampleCommand implements CommandExecutor {
 	
 	Lucius plugin;
 	 
-	public ClassName(Lucius instance) {
+	public ExampleCommand(Lucius instance) {
 		plugin = instance;
 	}
 
@@ -23,9 +23,6 @@ public class ExampleCommand implements CommandExecutor {
 		if(!(sender instanceof Player)) {
 			sender.sendMessage(ChatColor.RED + "You need to be a player to use the command, " + ChatColor.GREEN + "/" + cmd.getName().toString());
 			return true;
-		}
-		else {
-			
 		}
 		return false;
 	}
