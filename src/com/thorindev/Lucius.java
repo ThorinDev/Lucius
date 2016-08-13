@@ -71,7 +71,10 @@ public class Lucius extends JavaPlugin {
 	
 	private void registerConfig() {
 		config.addDefault("commands.colorchat", true);
-		config.addDefault("commands.colorchat", true);
+		config.addDefault("commands.fakesay", true);
+		config.addDefault("commands.fw", true);
+		config.addDefault("commands.hello", true);
+		config.addDefault("commands.vanish", true);
 		config.options().copyDefaults(true);
 		
 		saveConfig();
