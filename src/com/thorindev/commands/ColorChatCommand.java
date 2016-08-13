@@ -9,7 +9,7 @@ import com.thorindev.Lucius;
 
 import net.md_5.bungee.api.ChatColor;
 
-public class ColorChat implements CommandExecutor {
+public class ColorChatCommand implements CommandExecutor {
 	
 	Lucius plugin;
 	 
