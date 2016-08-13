@@ -70,5 +70,10 @@ public class Lucius extends JavaPlugin {
 	public Permission luciusCommandFW = new Permission("lucius.fw");
 	
 	private void registerConfig() {
+		config.addDefault("commands.colorchat", true);
+		config.addDefault("commands.colorchat", true);
+		config.options().copyDefaults(true);
+		
+		saveConfig();
 	}
 }
