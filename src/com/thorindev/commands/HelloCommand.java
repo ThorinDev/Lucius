@@ -27,32 +27,34 @@ public class HelloCommand implements CommandExecutor {
 			return true;
 		}
 		else {
-			Player player = (Player) sender;
-			Random random = new Random();
-			
-			int RandomNumber = random.nextInt(6)+1;
-			
-			switch(RandomNumber) {
-				case 1:
-					player.sendMessage(ChatColor.GREEN + "Why hello there, " + player.getDisplayName());
-					break;
-				case 2:
-					player.sendMessage(ChatColor.GREEN + "Hi " + player.getDisplayName());
-					break;
-				case 3:
-					player.sendMessage(ChatColor.GREEN + "Peekabo " + player.getDisplayName());
-					break;
-				case 4:
-					player.sendMessage(ChatColor.GREEN + "Bonjour " + player.getDisplayName());
-					break;
-				case 5:
-					player.sendMessage(ChatColor.GREEN + "Hallo " + player.getDisplayName());
-					break;
-				case 6:
-					player.sendMessage(ChatColor.GREEN + "Hallo " + player.getDisplayName());
-					break;
+			if(plugin.getConfig().getBoolean("commands.hello") == true) {
+				Player player = (Player) sender;
+				Random random = new Random();
+				
+				int RandomNumber = random.nextInt(6)+1;
+				
+				switch(RandomNumber) {
+					case 1:
+						player.sendMessage(ChatColor.GREEN + "Why hello there, " + player.getDisplayName());
+						break;
+					case 2:
+						player.sendMessage(ChatColor.GREEN + "Hi " + player.getDisplayName());
+						break;
+					case 3:
+						player.sendMessage(ChatColor.GREEN + "Peekabo " + player.getDisplayName());
+						break;
+					case 4:
+						player.sendMessage(ChatColor.GREEN + "Bonjour " + player.getDisplayName());
+						break;
+					case 5:
+						player.sendMessage(ChatColor.GREEN + "Hallo " + player.getDisplayName());
+						break;
+					case 6:
+						player.sendMessage(ChatColor.GREEN + "Hallo " + player.getDisplayName());
+						break;
+				}
+				return true;
 			}
-			return true;
 		}
 	}
 }
