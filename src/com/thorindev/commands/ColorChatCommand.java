@@ -91,7 +91,7 @@ public class ColorChatCommand implements CommandExecutor {
 					}
 				}
 				else {
-					player.sendMessage(ChatColor.RED + NoPermissionMessage);
+					player.sendMessage(NoPermissionMessage);
 					
 				}
 		}
