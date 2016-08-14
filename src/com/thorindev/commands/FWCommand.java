@@ -26,9 +26,24 @@ public class FWCommand implements CommandExecutor {
 		}
 		else {
 			Player player = (Player) sender;
+			String NoPermissionMessage = plugin.getConfig().getString("messages.noperm").replaceAll("(&([a-f0-9]))", "\u00A7$2");
+			String CommandDisabledMessage = plugin.getConfig().getString("messages.commanddisabled").replaceAll("(&([a-f0-9]))", "\u00A7$2");
+			Boolean isFWEnabled = plugin.getConfig().getBoolean("commands.fw");
 			
-			player.sendMessage(ChatColor.RED + "Disabled due to lag. Will enable it soon.");
-			return true;
+			if(isFWEnabled == true) {
+				if(player.hasPermission("lucius.fw")) {
+					player.sendMessage(ChatColor.RED + "Disabled due to lag.");
+					return true;
+				}
+				else {
+					player.sendMessage(NoPermissionMessage);
+					return true;
+				}
+			}
+			else {
+				player.sendMessage(CommandDisabledMessage);
+				return true;
+			}
 		}
 	}
 
