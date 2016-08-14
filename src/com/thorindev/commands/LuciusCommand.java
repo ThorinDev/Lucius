@@ -27,6 +27,13 @@ public class LuciusCommand implements CommandExecutor {
 		else {
 			Player player = (Player) sender;
 			String NoPermissionMessage = plugin.getConfig().getString("messages.noperm").replaceAll("(&([a-f0-9]))", "\u00A7$2");
+			if(player.hasPermission("lucius.lucius")) {
+				
+			}
+			else {
+				player.sendMessage(NoPermissionMessage);
+				return true;
+			}
 		}
 		return false;
 	}
