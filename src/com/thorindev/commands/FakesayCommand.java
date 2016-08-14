@@ -29,53 +29,56 @@ public class FakesayCommand implements CommandExecutor {
 			Player playerThatSent = (Player) sender;
 			String NoPermissionMessage = plugin.getConfig().getString("messages.noperm").replaceAll("(&([a-f0-9]))", "\u00A7$2");
 			String CommandDisabledMessage = plugin.getConfig().getString("messages.commanddisabled").replaceAll("(&([a-f0-9]))", "\u00A7$2");
-			if(playerThatSent.hasPermission("lucius.fakesay")) {
-				if(args.length != 0) {
-					if(args.length != 1) {
-						Player playerToTalk = Bukkit.getPlayerExact(args[0]);
-						StringBuilder sb = new StringBuilder();
-						
-						for(int i = 1; i < args.length; i++) {
-							sb.append(args[i]).append(" ");
-						}
-						
-						if(playerToTalk != null) {
-							if(!(playerToTalk.hasPermission("lucius.fakesay.excempt"))) {
-								String allArgs = sb.toString().trim();
-								playerToTalk.chat(allArgs);
-								return true;	
+			Boolean isChatColorEnabled = plugin.getConfig().getBoolean("commands.fakesay");
+
+			if()
+				if(playerThatSent.hasPermission("lucius.fakesay")) {
+					if(args.length != 0) {
+						if(args.length != 1) {
+							Player playerToTalk = Bukkit.getPlayerExact(args[0]);
+							StringBuilder sb = new StringBuilder();
+							
+							for(int i = 1; i < args.length; i++) {
+								sb.append(args[i]).append(" ");
 							}
-							else {
-								if(playerThatSent.hasPermission("lucius.fakesay.override")) {
+							
+							if(playerToTalk != null) {
+								if(!(playerToTalk.hasPermission("lucius.fakesay.excempt"))) {
 									String allArgs = sb.toString().trim();
 									playerToTalk.chat(allArgs);
-									return true;							
+									return true;	
 								}
 								else {
-									playerThatSent.sendMessage(ChatColor.RED + "Sorry you can't make that person talk!");
-									return true;
+									if(playerThatSent.hasPermission("lucius.fakesay.override")) {
+										String allArgs = sb.toString().trim();
+										playerToTalk.chat(allArgs);
+										return true;							
+									}
+									else {
+										playerThatSent.sendMessage(ChatColor.RED + "Sorry you can't make that person talk!");
+										return true;
+									}
 								}
+							}
+							else {
+								playerThatSent.sendMessage(ChatColor.RED + "The player you specified " + args[0] + " is not online");
+								return true;
 							}
 						}
 						else {
-							playerThatSent.sendMessage(ChatColor.RED + "The player you specified " + args[0] + " is not online");
+							playerThatSent.sendMessage(ChatColor.RED + "You need to specify the message");
 							return true;
 						}
 					}
 					else {
-						playerThatSent.sendMessage(ChatColor.RED + "You need to specify the message");
+						playerThatSent.sendMessage(ChatColor.RED + "You need to specify the player and the message");
 						return true;
 					}
 				}
 				else {
-					playerThatSent.sendMessage(ChatColor.RED + "You need to specify the player and the message");
+					playerThatSent.sendMessage(NoPermissionMessage);
 					return true;
 				}
-			}
-			else {
-				playerThatSent.sendMessage(NoPermissionMessage);
-				return true;
-			}
 		}
 	}
 
