@@ -14,5 +14,3 @@ commands:
     aliases: [cc,colourchat]
   fw:
     usage: /fw
-  vanish:
-    usage: /vanish
