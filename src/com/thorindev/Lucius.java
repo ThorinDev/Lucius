@@ -59,6 +59,8 @@ public class Lucius extends JavaPlugin {
 		
 		pm.addPermission(luciusCommandFW);
 		pm.addPermission(luciusCommandVanish);
+		
+		pm.addPermission(luciusCommandLucius);
 	}
 	
 	public static Permission luciusCommandFakesay = new Permission("lucius.fakesay");
@@ -74,6 +76,8 @@ public class Lucius extends JavaPlugin {
 	
 	public Permission luciusCommandFW = new Permission("lucius.fw");
 	public Permission luciusCommandVanish = new Permission("lucius.vanish");
+	
+	public Permission luciusCommandLucius = new Permission("lucius.lucius");
 	
 	private void registerConfig() {
 		config.addDefault("commands.colorchat", true);
