@@ -27,6 +27,7 @@ public class ColorChatCommand implements CommandExecutor {
 			Player player = (Player) sender;
 			String NoPermissionMessage = plugin.getConfig().getString("messages.noperm").replaceAll("(&([a-f0-9]))", "\u00A7$2");
 			
+			Boolean isChatColorEnabled = plugin.getConfig().getBoolean("commands.colorchat");
 			if(player.hasPermission("lucius.colorchat")) {
 				if(args.length >= 1) {
 					String Message = "";
