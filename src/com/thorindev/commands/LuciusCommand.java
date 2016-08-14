@@ -28,7 +28,12 @@ public class LuciusCommand implements CommandExecutor {
 			Player player = (Player) sender;
 			String NoPermissionMessage = plugin.getConfig().getString("messages.noperm").replaceAll("(&([a-f0-9]))", "\u00A7$2");
 			if(player.hasPermission("lucius.lucius")) {
-				
+				if(args.length == 1) {
+					
+				}
+				else {
+					player.sendMessage(ChatColor.RED + "Too little or too many arguments");
+				}
 			}
 			else {
 				player.sendMessage(NoPermissionMessage);
