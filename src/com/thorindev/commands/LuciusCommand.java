@@ -29,10 +29,16 @@ public class LuciusCommand implements CommandExecutor {
 			String NoPermissionMessage = plugin.getConfig().getString("messages.noperm").replaceAll("(&([a-f0-9]))", "\u00A7$2");
 			if(player.hasPermission("lucius.lucius")) {
 				if(args.length == 1) {
-					
+					if(args[0].equalsIgnoreCase("reload")) {
+						plugin.reloadConfig();
+						plugin.saveConfig();
+						player.sendMessage(ChatColor.GREEN + "Reloaded the config!");
+						return true;
+					}
 				}
 				else {
 					player.sendMessage(ChatColor.RED + "Too little or too many arguments");
+					return true;
 				}
 			}
 			else {
