@@ -92,13 +92,13 @@ public class ColorChatCommand implements CommandExecutor {
 				}
 				else {
 					player.sendMessage(NoPermissionMessage);
-					
+					return true;
 				}
 		}
 		else {
 			player.sendMessage(CommandDisabled);
+			return true;
 		}
-		return false;
 	}
 
 }}
