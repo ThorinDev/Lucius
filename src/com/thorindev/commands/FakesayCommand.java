@@ -29,9 +29,9 @@ public class FakesayCommand implements CommandExecutor {
 			Player playerThatSent = (Player) sender;
 			String NoPermissionMessage = plugin.getConfig().getString("messages.noperm").replaceAll("(&([a-f0-9]))", "\u00A7$2");
 			String CommandDisabledMessage = plugin.getConfig().getString("messages.commanddisabled").replaceAll("(&([a-f0-9]))", "\u00A7$2");
-			Boolean isChatColorEnabled = plugin.getConfig().getBoolean("commands.fakesay");
+			Boolean isFakesayEnabled = plugin.getConfig().getBoolean("commands.fakesay");
 
-			if()
+			if(isFakesayEnabled == true) {
 				if(playerThatSent.hasPermission("lucius.fakesay")) {
 					if(args.length != 0) {
 						if(args.length != 1) {
@@ -79,6 +79,11 @@ public class FakesayCommand implements CommandExecutor {
 					playerThatSent.sendMessage(NoPermissionMessage);
 					return true;
 				}
+			}
+			else {
+				playerThatSent.sendMessage(CommandDisabledMessage);
+				return true;
+			}
 		}
 	}
 
