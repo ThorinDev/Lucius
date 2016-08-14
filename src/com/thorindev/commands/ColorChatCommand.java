@@ -25,6 +25,7 @@ public class ColorChatCommand implements CommandExecutor {
 		}
 		else {
 			Player player = (Player) sender;
+			String NoPermissionMessage = plugin.getConfig().getString("messages.noperm").replaceAll("(&([a-f0-9]))", "\u00A7$2");
 			
 			if(player.hasPermission("lucius.colorchat")) {
 				if(args.length >= 1) {
@@ -88,7 +89,7 @@ public class ColorChatCommand implements CommandExecutor {
 				}
 			}
 			else {
-				player.sendMessage(ChatColor.RED + "You do not have permission to use this command");
+				player.sendMessage(ChatColor.RED + NoPermissionMessage);
 				return true;
 			}
 		}
