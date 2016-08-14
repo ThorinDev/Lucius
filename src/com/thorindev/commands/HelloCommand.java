@@ -28,7 +28,10 @@ public class HelloCommand implements CommandExecutor {
 		}
 		else {
 			Player player = (Player) sender;
-			if(plugin.getConfig().getBoolean("commands.hello") == true) {
+			String CommandDisabledMessage = plugin.getConfig().getString("messages.commanddisabled").replaceAll("(&([a-f0-9]))", "\u00A7$2");
+			Boolean isHelloEnabled = plugin.getConfig().getBoolean("commands.hello");
+			
+			if(isHelloEnabled == true) {
 				Random random = new Random();
 				
 				int RandomNumber = random.nextInt(6)+1;
@@ -56,7 +59,7 @@ public class HelloCommand implements CommandExecutor {
 				return true;
 			}
 			else {
-				player.sendMessage(ChatColor.RED + "Command Disabled. :(");
+				player.sendMessage(CommandDisabledMessage);
 			}
 		}
 		return false;
