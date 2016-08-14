@@ -96,7 +96,7 @@ public class ColorChatCommand implements CommandExecutor {
 				}
 		}
 		else {
-			player.sendMessage(CommandDisabled);
+			player.sendMessage(CommandDisabledMessage);
 			return true;
 		}
 	}
