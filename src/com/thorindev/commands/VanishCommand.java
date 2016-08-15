@@ -35,6 +35,9 @@ public class VanishCommand implements CommandExecutor, Listener {
 		}
 		else {
 			Player player = (Player) sender;
+			String NoPermissionMessage = plugin.getConfig().getString("messages.noperm").replaceAll("(&([a-f0-9]))", "\u00A7$2");
+			String CommandDisabledMessage = plugin.getConfig().getString("messages.commanddisabled").replaceAll("(&([a-f0-9]))", "\u00A7$2");
+			Boolean isVanishEnabled = plugin.getConfig().getBoolean("commands.vanish");
 			if(player.hasPermission("lucius.vanish")) {
 				return true;
 			}	
