@@ -60,12 +60,12 @@ public class VanishCommand implements CommandExecutor, Listener {
                   }
 				}
 				else {
-					player.sendMessage(NoPermissionMessage);
+					player.sendMessage(NPMColor);
 					return true;
 				}
 			}
 			else {
-				player.sendMessage(CommandDisabledMessage);
+				player.sendMessage(CDMColor);
 				return true;
 			}
 		}
