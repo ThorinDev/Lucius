@@ -34,36 +34,36 @@ public class VanishCommand implements CommandExecutor, Listener {
 			return true;
 		}
 		else {
-			Player p = (Player) sender;
+			Player player = (Player) sender;
 			String NoPermissionMessage = plugin.getConfig().getString("messages.noperm").replaceAll("(&([a-f0-9]))", "\u00A7$2");
 			String CommandDisabledMessage = plugin.getConfig().getString("messages.commanddisabled").replaceAll("(&([a-f0-9]))", "\u00A7$2");
 			Boolean isVanishEnabled = plugin.getConfig().getBoolean("commands.vanish");
 			if(isVanishEnabled == true) {
-				if(p.hasPermission("lucius.vanish")) {
-				if (!vanished.contains(p)) {
+				if(player.hasPermission("lucius.vanish")) {
+				if (!vanished.contains(player)) {
                           for (Player pl : Bukkit.getServer().getOnlinePlayers()) {
-                                  pl.hidePlayer(p);
+                                  pl.hidePlayer(player);
                           }
-                          vanished.add(p);
+                          vanished.add(player);
                           p.sendMessage(ChatColor.GREEN + "You have been vanished!");
                           return true;
                   }
                   else {
                           for (Player pl : Bukkit.getServer().getOnlinePlayers()) {
-                                  pl.showPlayer(p);
+                                  pl.showPlayer(player);
                           }
-                          vanished.remove(p);
+                          vanished.remove(player);
                           p.sendMessage(ChatColor.GREEN + "You have been unvanished!");
                           return true;
                   }
 				}
 				else {
-					p.sendMessage(NoPermissionMessage);
+					player.sendMessage(NoPermissionMessage);
 					return true;
 				}
 			}
 			else {
-				p.sendMessage(CommandDisabledMessage);
+				player.sendMessage(CommandDisabledMessage);
 				return true;
 			}
 		}
