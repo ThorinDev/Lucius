@@ -27,8 +27,10 @@ public class FakesayCommand implements CommandExecutor {
 		}
 		else {
 			Player playerThatSent = (Player) sender;
-			String NoPermissionMessage = plugin.getConfig().getString("messages.noperm").replaceAll("(&([a-f0-9]))", "\u00A7$2");
-			String CommandDisabledMessage = plugin.getConfig().getString("messages.commanddisabled").replaceAll("(&([a-f0-9]))", "\u00A7$2");
+			String NoPermissionMessage = plugin.getConfig().getString("messages.noperm");
+			String NPMColor = ChatColor.translateAlternateColorCodes('&', NoPermissionMessage);
+			String CommandDisabledMessage = plugin.getConfig().getString("messages.commanddisabled");
+			String CDMColor = ChatColor.translateAlternateColorCodes('&', CommandDisabledMessage);
 			Boolean isFakesayEnabled = plugin.getConfig().getBoolean("commands.fakesay");
 
 			if(isFakesayEnabled == true) {
@@ -76,12 +78,12 @@ public class FakesayCommand implements CommandExecutor {
 					}
 				}
 				else {
-					playerThatSent.sendMessage(NoPermissionMessage);
+					playerThatSent.sendMessage(NPMColor);
 					return true;
 				}
 			}
 			else {
-				playerThatSent.sendMessage(CommandDisabledMessage);
+				playerThatSent.sendMessage(CDMColor);
 				return true;
 			}
 		}
