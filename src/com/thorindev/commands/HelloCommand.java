@@ -60,7 +60,7 @@ public class HelloCommand implements CommandExecutor {
 				return true;
 			}
 			else {
-				player.sendMessage(CommandDisabledMessage);
+				player.sendMessage(CDMColor);
 			}
 		}
 		return false;

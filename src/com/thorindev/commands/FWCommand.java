@@ -84,7 +84,7 @@ public class FWCommand implements CommandExecutor {
 				}
 			}
 			else {
-				player.sendMessage(CommandDisabledMessage);
+				player.sendMessage(CDMColor);
 				return true;
 			}
 		}
