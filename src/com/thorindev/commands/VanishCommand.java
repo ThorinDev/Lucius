@@ -45,7 +45,7 @@ public class VanishCommand implements CommandExecutor, Listener {
                                   pl.hidePlayer(player);
                           }
                           vanished.add(player);
-                          p.sendMessage(ChatColor.GREEN + "You have been vanished!");
+                          player.sendMessage(ChatColor.GREEN + "You have been vanished!");
                           return true;
                   }
                   else {
@@ -53,7 +53,7 @@ public class VanishCommand implements CommandExecutor, Listener {
                                   pl.showPlayer(player);
                           }
                           vanished.remove(player);
-                          p.sendMessage(ChatColor.GREEN + "You have been unvanished!");
+                          player.sendMessage(ChatColor.GREEN + "You have been unvanished!");
                           return true;
                   }
 				}
