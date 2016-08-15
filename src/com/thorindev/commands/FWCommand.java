@@ -36,7 +36,8 @@ public class FWCommand implements CommandExecutor {
 			Player player = (Player) sender;
 			String NoPermissionMessage = plugin.getConfig().getString("messages.noperm");
 			String NPMColor = ChatColor.translateAlternateColorCodes('&', NoPermissionMessage);
-			String CommandDisabledMessage = plugin.getConfig().getString("messages.commanddisabled").replaceAll("(&([a-f0-9]))", "\u00A7$2");
+			String CommandDisabledMessage = plugin.getConfig().getString("messages.commanddisabled");
+			String CDMColor = ChatColor.translateAlternateColorCodes('&', CommandDisabledMessage);
 			Boolean isFWEnabled = plugin.getConfig().getBoolean("commands.fw");
 			
 			if(isFWEnabled == true) {
