@@ -28,7 +28,8 @@ public class HelloCommand implements CommandExecutor {
 		}
 		else {
 			Player player = (Player) sender;
-			String CommandDisabledMessage = plugin.getConfig().getString("messages.commanddisabled").replaceAll("(&([a-f0-9]))", "\u00A7$2");
+			String CommandDisabledMessage = plugin.getConfig().getString("messages.commanddisabled");
+			String CDMColor = ChatColor.translateAlternateColorCodes('&', CommandDisabledMessage);
 			Boolean isHelloEnabled = plugin.getConfig().getBoolean("commands.hello");
 			
 			if(isHelloEnabled == true) {

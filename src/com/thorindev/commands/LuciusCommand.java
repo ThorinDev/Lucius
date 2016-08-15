@@ -26,7 +26,8 @@ public class LuciusCommand implements CommandExecutor {
 		}
 		else {
 			Player player = (Player) sender;
-			String NoPermissionMessage = plugin.getConfig().getString("messages.noperm").replaceAll("(&([a-f0-9]))", "\u00A7$2");
+			String NoPermissionMessage = plugin.getConfig().getString("messages.noperm");
+			String NPMColor = ChatColor.translateAlternateColorCodes('&', NoPermissionMessage);
 			if(player.hasPermission("lucius.lucius")) {
 				if(args.length == 1) {
 					if(args[0].equalsIgnoreCase("reload")) {
