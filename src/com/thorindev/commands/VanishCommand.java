@@ -34,18 +34,51 @@ public class VanishCommand implements CommandExecutor, Listener {
 			return true;
 		}
 		else {
-			Player player = (Player) sender;
+			Player p = (Player) sender;
 			String NoPermissionMessage = plugin.getConfig().getString("messages.noperm").replaceAll("(&([a-f0-9]))", "\u00A7$2");
 			String CommandDisabledMessage = plugin.getConfig().getString("messages.commanddisabled").replaceAll("(&([a-f0-9]))", "\u00A7$2");
 			Boolean isVanishEnabled = plugin.getConfig().getBoolean("commands.vanish");
-			if(player.hasPermission("lucius.vanish")) {
-				return true;
-			}	
+			if(isVanishEnabled == true) {
+				if(p.hasPermission("lucius.vanish")) {
+				if (!vanished.contains(p)) {
+                          for (Player pl : Bukkit.getServer().getOnlinePlayers()) {
+                                  pl.hidePlayer(p);
+                          }
+                          vanished.add(p);
+                          p.sendMessage(ChatColor.GREEN + "You have been vanished!");
+                          return true;
+                  }
+                  else {
+                          for (Player pl : Bukkit.getServer().getOnlinePlayers()) {
+                                  pl.showPlayer(p);
+                          }
+                          vanished.remove(p);
+                          p.sendMessage(ChatColor.GREEN + "You have been unvanished!");
+                          return true;
+                  }
+				}
+				else {
+					p.sendMessage(NoPermissionMessage);
+					return true;
+				}
+			}
 			else {
-				player.sendMessage(ChatColor.RED + "You do not have permission to use this command");
-				return true;	
+				p.sendMessage(CommandDisabledMessage);
+				return true;
 			}
 		}
+	}
+	
+	@EventHandler
+	public void onPlayerJoinVanish(PlayerJoinEvent event) {
+		for(Player player : vanished) {
+			event.getPlayer().hidePlayer(player);
+		}
+	}
+	
+	@EventHandler
+	public void onPlayerQuitVanish(PlayerQuitEvent event) {
+		vanished.remove(event.getPlayer());
 	}
 
 }
