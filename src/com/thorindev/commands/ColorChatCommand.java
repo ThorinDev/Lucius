@@ -102,12 +102,12 @@ public class ColorChatCommand implements CommandExecutor {
 					}
 				}
 				else {
-					player.sendMessage(NoPermissionMessage);
+					player.sendMessage(NPMColor);
 					return true;
 				}
 		}
 		else {
-			player.sendMessage(CommandDisabledMessage);
+			player.sendMessage(CDMColor);
 			return true;
 		}
 	}
