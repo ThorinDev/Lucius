@@ -43,7 +43,7 @@ public class LuciusCommand implements CommandExecutor {
 				}
 			}
 			else {
-				player.sendMessage(NoPermissionMessage);
+				player.sendMessage(NPMColor);
 				return true;
 			}
 		}
