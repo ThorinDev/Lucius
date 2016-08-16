@@ -25,6 +25,13 @@ public class FWCommand2 implements CommandExecutor {
 			sender.sendMessage(ChatColor.RED + "You need to be a player to use the command, " + ChatColor.GREEN + "/" + cmd.getName().toString());
 			return true;
 		}
-		return false;
+		else {
+			Player player = (Player) sender;
+			String NoPermissionMessage = plugin.getConfig().getString("messages.noperm");
+			String NPMColor = ChatColor.translateAlternateColorCodes('&', NoPermissionMessage);
+			String CommandDisabledMessage = plugin.getConfig().getString("messages.commanddisabled");
+			String CDMColor = ChatColor.translateAlternateColorCodes('&', CommandDisabledMessage);
+			Boolean isFWEnabled = plugin.getConfig().getBoolean("commands.fw");
+		}
 	}
 }
