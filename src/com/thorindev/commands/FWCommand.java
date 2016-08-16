@@ -19,8 +19,6 @@ import net.md_5.bungee.api.ChatColor;
 
 public class FWCommand implements CommandExecutor {
 
-
-	
 	Lucius plugin;
 	 
 	public FWCommand(Lucius instance) {
@@ -46,11 +44,7 @@ public class FWCommand implements CommandExecutor {
 				if(player.hasPermission("lucius.fw")) {
 					Firework fw = (Firework) player.getWorld().spawnEntity(player.getLocation(), EntityType.FIREWORK);
 					FireworkMeta fwm = fw.getFireworkMeta();
-
-					// Our random generator
 					Random r = new Random();
-
-					// Get the type
 					int rt = r.nextInt(4) + 1;
 					Type type = Type.BALL;
 					if (rt == 1)
@@ -63,26 +57,14 @@ public class FWCommand implements CommandExecutor {
 						type = Type.CREEPER;
 					if (rt == 5)
 						type = Type.STAR;
-
-					// Get our random colours
 					Color c1 = getColor();
 					Color c2 = getColor();
-
-					// Create our effect with this
-					FireworkEffect effect = FireworkEffect.builder().flicker(r.nextBoolean()).withColor(c1).withFade(c2)
-							.with(type).trail(r.nextBoolean()).build();
-
-					// Then apply the effect to the meta
+					FireworkEffect effect = FireworkEffect.builder().flicker(r.nextBoolean()).withColor(c1).withFade(c2).with(type).trail(r.nextBoolean()).build();
 					fwm.addEffect(effect);
-
-					// Generate some random power and set it
 					int rp = r.nextInt(2) + 1;
 					fwm.setPower(rp);
-
-					// Then apply this to our rocket
 					fw.setFireworkMeta(fwm);
-					return true;
-					
+					return true;	
 				}
 				else {
 					player.sendMessage(NPMColor);
