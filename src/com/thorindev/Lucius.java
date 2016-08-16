@@ -7,6 +7,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.thorindev.commands.ColorChatCommand;
 import com.thorindev.commands.FWCommand;
+import com.thorindev.commands.FWCommand2;
 import com.thorindev.commands.FakesayCommand;
 import com.thorindev.commands.HelloCommand;
 import com.thorindev.commands.LuciusCommand;
@@ -37,6 +38,7 @@ public class Lucius extends JavaPlugin {
 		getCommand("fw").setExecutor(new FWCommand(this));
 		getCommand("vanish").setExecutor(new VanishCommand(this));
 		getCommand("lucius").setExecutor(new LuciusCommand(this));
+		getCommand("fw2").setExecutor(new FWCommand2(this));
 	}
 	
 	private void registerEvents() {

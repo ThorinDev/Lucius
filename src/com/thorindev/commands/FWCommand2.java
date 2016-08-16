@@ -1,5 +1,6 @@
 package com.thorindev.commands;
 
+import java.util.HashMap;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -11,7 +12,7 @@ import net.md_5.bungee.api.ChatColor;
 
 public class FWCommand2 implements CommandExecutor {
 	
-
+	public HashMap<String, Long> cooldowns = new HashMap<String, Long>();
 	Lucius plugin;
 	 
 	public FWCommand2(Lucius instance) {
@@ -34,7 +35,17 @@ public class FWCommand2 implements CommandExecutor {
 			Boolean isFWEnabled = plugin.getConfig().getBoolean("commands.fw");
 			if(isFWEnabled == true) {
 				if(player.hasPermission("lucius.fw")) {
-					
+					int cooldownTime = 60; // Get number of seconds from wherever you want
+			        if(cooldowns.containsKey(player.getName())) {
+			            long secondsLeft = ((cooldowns.get(player.getName())/1000)+cooldownTime) - (System.currentTimeMillis()/1000);
+			            if(secondsLeft>0) {
+			                player.sendMessage("You cant use that commands for another "+ secondsLeft +" seconds!");
+			                return true;
+			            }
+			        }
+			        cooldowns.put(player.getName(), System.currentTimeMillis());
+			        player.sendMessage("Command Activated!");
+			        return true; 
 				}
 				else {
 					player.sendMessage(NPMColor);
