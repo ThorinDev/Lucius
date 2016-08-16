@@ -38,7 +38,7 @@ public class FWCommand2 implements CommandExecutor {
 					int cooldownTime = 60; // Get number of seconds from wherever you want
 			        if(cooldowns.containsKey(player.getName())) {
 			            long secondsLeft = ((cooldowns.get(player.getName())/1000)+cooldownTime) - (System.currentTimeMillis()/1000);
-			            if(secondsLeft>0) {
+			            if(secondsLeft > 0) {
 			                player.sendMessage("You cant use that commands for another "+ secondsLeft +" seconds!");
 			                return true;
 			            }
