@@ -32,6 +32,19 @@ public class FWCommand2 implements CommandExecutor {
 			String CommandDisabledMessage = plugin.getConfig().getString("messages.commanddisabled");
 			String CDMColor = ChatColor.translateAlternateColorCodes('&', CommandDisabledMessage);
 			Boolean isFWEnabled = plugin.getConfig().getBoolean("commands.fw");
+			if(isFWEnabled == true) {
+				if(player.hasPermission("lucius.fw")) {
+					
+				}
+				else {
+					player.sendMessage(NPMColor);
+					return true;
+				}
+			}
+			else {
+				player.sendMessage(CDMColor);
+				return true;
+			}
 		}
 	}
 }
