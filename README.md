@@ -13,8 +13,8 @@ A cosemetics server plugin.
 |  | ```lucius.chatcolor.itallic``` | Allows you to make your chat itallic |
 |  | ```lucius.chatcolor.magic``` | Allows you to make your chat magical |
 |  | ```lucius.chatcolor.strike``` | Allows you to make your chat strikthrough |
-| ```fw``` | ```lucius.fw``` | Currently disabled while I optimize it. But hey its there. |
-| ```vanish``` | ```lucius.vanish```  | Doesn't work yet. |
+| ```fw``` | ```lucius.fw``` | Allows you to spawn a firework. Needs to have a timeout |
+| ```vanish``` | ```lucius.vanish```  | Allows you to vanish. Only for yourself though |
 |  |  |  |
 |  |  |  |
 |  |  |  |
