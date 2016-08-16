@@ -42,7 +42,6 @@ public class FWCommand implements CommandExecutor {
 			
 			if(isFWEnabled == true) {
 				if(player.hasPermission("lucius.fw")) {
-					//Spawn the Firework, get the FireworkMeta.
 		            Firework fw = (Firework) player.getWorld().spawnEntity(player.getLocation(), EntityType.FIREWORK);
 		            FireworkMeta fwm = fw.getFireworkMeta();
 		           
@@ -95,59 +94,57 @@ public class FWCommand implements CommandExecutor {
 		
 		switch(i) {
 			case 1:  
-				c=Color.AQUA;
+				c = Color.AQUA;
 				break;
 			case 2:  
-				c=Color.BLACK;
+				c = Color.BLACK;
 				break;
 			case 3:  
-				c=Color.BLUE;
+				c = Color.BLUE;
 				break;
 			case 4:  
-				c=Color.FUCHSIA;
+				c = Color.FUCHSIA;
 				break;
 			case 5:  
-				c=Color.GREEN;
+				c = Color.GREEN;
 				break;
 			case 6:  
-				c=Color.LIME;
+				c = Color.LIME;
 				break;
 			case 7:  
-				c=Color.MAROON;
+				c = Color.MAROON;
 				break;
 			case 8:  
-				c=Color.NAVY;
+				c = Color.NAVY;
 				break;
 			case 9:  
-				c=Color.OLIVE;
+				c = Color.OLIVE;
 				break;
 			case 10:  
-				c=Color.ORANGE;
+				c = Color.ORANGE;
 				break;
 			case 11:  
-				c=Color.PURPLE;
+				c = Color.PURPLE;
 				break;
 			case 12:  
-				c=Color.RED;
+				c = Color.RED;
 				break;
 			case 13:  
-				c=Color.SILVER;
+				c = Color.SILVER;
 				break;
 			case 14:  
-				c=Color.TEAL;
+				c = Color.TEAL;
 				break;
 			case 15:  
-				c=Color.WHITE;
+				c = Color.WHITE;
 				break;
 			case 16:  
-				c=Color.YELLOW;
+				c = Color.YELLOW;
 				break;
 			case 17:  
-				c=Color.AQUA;
+				c = Color.AQUA;
 				break;	
 		}	 
 		return c;
-		}
-
-
+	}
 }
