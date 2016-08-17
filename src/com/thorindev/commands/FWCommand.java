@@ -44,7 +44,7 @@ public class FWCommand implements CommandExecutor {
 			Boolean isFWEnabled = plugin.getConfig().getBoolean("commands.fw");
 			if(isFWEnabled == true) {
 				if(player.hasPermission("lucius.fw")) {
-					int cooldownTime = FWTimeout; // Get number of seconds from wherever you want
+					int cooldownTime = FWTimeout;
 			        if(cooldowns.containsKey(sender.getName())) {
 			            long secondsLeft = ((cooldowns.get(sender.getName())/1000)+cooldownTime) - (System.currentTimeMillis()/1000);
 			            if(secondsLeft>0) {
