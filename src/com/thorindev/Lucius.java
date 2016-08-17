@@ -84,6 +84,7 @@ public class Lucius extends JavaPlugin {
 		config.addDefault("commands.colorchat", true);
 		config.addDefault("commands.fakesay", true);
 		config.addDefault("commands.fw", true);
+		config.addDefault("commands.fwtimeout",  15);
 		config.addDefault("commands.hello", true);
 		config.addDefault("commands.vanish", true);
 		config.addDefault("messages.noperm", "&cYou do not have permission to use this command");
