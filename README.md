@@ -4,7 +4,7 @@ A cosemetics server plugin.
 | Command | Permission | Description |
 |--------------------------------|----------------------------------|------------------------------------------------------------------------------|
 | ```hello``` or ```hi``` | ```none``` | Sends a randomized hello to the player |
-| ```fakesay``` | ```lucius.fakesay``` | Allows you to make other player talk |
+| ```fakesay``` or ```sudo``` or ```fs``` | ```lucius.fakesay``` | Allows you to make other player talk |
 |  | ```lucius.fakesay.override``` | Allows you to make excempt players talk! |
 |  | ```lucius.fakesay.excempt``` | Unless the player has ```lucius.fakesay.override``` no one can make you talk |
 | ```chatcolor``` or  ```cc``` | ```lucius.chatcolor``` | Allows you to color your chat |
