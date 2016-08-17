@@ -38,7 +38,6 @@ public class Lucius extends JavaPlugin {
 		getCommand("fw").setExecutor(new FWCommand(this));
 		getCommand("vanish").setExecutor(new VanishCommand(this));
 		getCommand("lucius").setExecutor(new LuciusCommand(this));
-		getCommand("fw2").setExecutor(new FWCommand2(this));
 	}
 	
 	private void registerEvents() {

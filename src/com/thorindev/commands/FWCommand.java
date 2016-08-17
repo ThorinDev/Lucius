@@ -18,12 +18,12 @@ import com.thorindev.Lucius;
 
 import net.md_5.bungee.api.ChatColor;
 
-public class FWCommand2 implements CommandExecutor {
+public class FWCommand implements CommandExecutor {
 	
 	public HashMap<String, Long> cooldowns = new HashMap<String, Long>();
 	Lucius plugin;
 	 
-	public FWCommand2(Lucius instance) {
+	public FWCommand(Lucius instance) {
 		plugin = instance;
 	}
 
