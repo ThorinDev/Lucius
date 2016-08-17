@@ -14,6 +14,7 @@ commands:
     aliases: [cc,colourchat]
   fw:
     usage: /fw
+    aliases: [firework,launchme]
   vanish:
     usage: /vanish
   lucius:

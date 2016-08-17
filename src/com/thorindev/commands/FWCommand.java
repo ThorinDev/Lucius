@@ -1,5 +1,6 @@
 package com.thorindev.commands;
 
+import java.util.HashMap;
 import java.util.Random;
 
 import org.bukkit.Color;
@@ -18,7 +19,8 @@ import com.thorindev.Lucius;
 import net.md_5.bungee.api.ChatColor;
 
 public class FWCommand implements CommandExecutor {
-
+	
+	public HashMap<String, Long> cooldowns = new HashMap<String, Long>();
 	Lucius plugin;
 	 
 	public FWCommand(Lucius instance) {
@@ -39,10 +41,20 @@ public class FWCommand implements CommandExecutor {
 			String CommandDisabledMessage = plugin.getConfig().getString("messages.commanddisabled");
 			String CDMColor = ChatColor.translateAlternateColorCodes('&', CommandDisabledMessage);
 			Boolean isFWEnabled = plugin.getConfig().getBoolean("commands.fw");
-			
 			if(isFWEnabled == true) {
 				if(player.hasPermission("lucius.fw")) {
-					Firework fw = (Firework) player.getWorld().spawnEntity(player.getLocation(), EntityType.FIREWORK);
+					int cooldownTime = 15; // Get number of seconds from wherever you want
+			        if(cooldowns.containsKey(sender.getName())) {
+			            long secondsLeft = ((cooldowns.get(sender.getName())/1000)+cooldownTime) - (System.currentTimeMillis()/1000);
+			            if(secondsLeft>0) {
+			                // Still cooling down
+			                sender.sendMessage("You cant use that commands for another "+ secondsLeft +" seconds!");
+			                return true;
+			            }
+			        }
+			        // No cooldown found or cooldown has expired, save new cooldown
+			        cooldowns.put(sender.getName(), System.currentTimeMillis());
+			        Firework fw = (Firework) player.getWorld().spawnEntity(player.getLocation(), EntityType.FIREWORK);
 					FireworkMeta fwm = fw.getFireworkMeta();
 					Random r = new Random();
 					int rt = r.nextInt(4) + 1;
@@ -64,7 +76,7 @@ public class FWCommand implements CommandExecutor {
 					int rp = r.nextInt(2) + 1;
 					fwm.setPower(rp);
 					fw.setFireworkMeta(fwm);
-					return true;	
+			        return true;
 				}
 				else {
 					player.sendMessage(NPMColor);
@@ -75,9 +87,8 @@ public class FWCommand implements CommandExecutor {
 				player.sendMessage(CDMColor);
 				return true;
 			}
-			}}
-	
-	
+		}
+	}
 	private Color getColor() {
 		Color c = null;
 		Random random = new Random();
