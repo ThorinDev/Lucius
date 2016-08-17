@@ -45,16 +45,16 @@ public class FWCommand implements CommandExecutor {
 			if(isFWEnabled == true) {
 				if(player.hasPermission("lucius.fw")) {
 					int cooldownTime = FWTimeout;
-			        if(cooldowns.containsKey(sender.getName())) {
-			            long secondsLeft = ((cooldowns.get(sender.getName())/1000)+cooldownTime) - (System.currentTimeMillis()/1000);
+			        if(cooldowns.containsKey(player.getName())) {
+			            long secondsLeft = ((cooldowns.get(player.getName())/1000)+cooldownTime) - (System.currentTimeMillis()/1000);
 			            if(secondsLeft>0) {
 			                // Still cooling down
-			                sender.sendMessage("You cant use that commands for another "+ secondsLeft +" seconds!");
+			                player.sendMessage(ChatColor.GREEN + "You cannot use " + cmd.getName() + " for another" + secondsLeft + " seconds.");
 			                return true;
 			            }
 			        }
 			        // No cooldown found or cooldown has expired, save new cooldown
-			        cooldowns.put(sender.getName(), System.currentTimeMillis());
+			        cooldowns.put(player.getName(), System.currentTimeMillis());
 			        Firework fw = (Firework) player.getWorld().spawnEntity(player.getLocation(), EntityType.FIREWORK);
 					FireworkMeta fwm = fw.getFireworkMeta();
 					Random r = new Random();
