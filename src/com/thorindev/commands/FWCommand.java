@@ -40,10 +40,11 @@ public class FWCommand implements CommandExecutor {
 			String NPMColor = ChatColor.translateAlternateColorCodes('&', NoPermissionMessage);
 			String CommandDisabledMessage = plugin.getConfig().getString("messages.commanddisabled");
 			String CDMColor = ChatColor.translateAlternateColorCodes('&', CommandDisabledMessage);
+			int FWTimeout = plugin.getConfig().getInt("commands.fwtimeout");
 			Boolean isFWEnabled = plugin.getConfig().getBoolean("commands.fw");
 			if(isFWEnabled == true) {
 				if(player.hasPermission("lucius.fw")) {
-					int cooldownTime = 15; // Get number of seconds from wherever you want
+					int cooldownTime = FWTimeout; // Get number of seconds from wherever you want
 			        if(cooldowns.containsKey(sender.getName())) {
 			            long secondsLeft = ((cooldowns.get(sender.getName())/1000)+cooldownTime) - (System.currentTimeMillis()/1000);
 			            if(secondsLeft>0) {
