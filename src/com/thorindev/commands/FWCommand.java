@@ -53,7 +53,6 @@ public class FWCommand implements CommandExecutor {
 			                return true;
 			            }
 			        }
-			        // No cooldown found or cooldown has expired, save new cooldown
 			        cooldowns.put(player.getName(), System.currentTimeMillis());
 			        Firework fw = (Firework) player.getWorld().spawnEntity(player.getLocation(), EntityType.FIREWORK);
 					FireworkMeta fwm = fw.getFireworkMeta();
