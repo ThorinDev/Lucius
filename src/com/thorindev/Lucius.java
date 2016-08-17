@@ -7,7 +7,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.thorindev.commands.ColorChatCommand;
 import com.thorindev.commands.FWCommand;
-import com.thorindev.commands.FWCommand2;
 import com.thorindev.commands.FakesayCommand;
 import com.thorindev.commands.HelloCommand;
 import com.thorindev.commands.LuciusCommand;
