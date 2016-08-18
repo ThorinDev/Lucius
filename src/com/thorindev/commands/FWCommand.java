@@ -60,7 +60,7 @@ public class FWCommand implements CommandExecutor {
 					Type t1 = getType();
 					Color c1 = getColor();
 					Color c2 = getColor();
-					FireworkEffect effect = FireworkEffect.builder().flicker(r.nextBoolean()).withColor(c1).withFade(c2).with(t1).trail(random.nextBoolean()).build();
+					FireworkEffect effect = FireworkEffect.builder().flicker(random.nextBoolean()).withColor(c1).withFade(c2).with(t1).trail(random.nextBoolean()).build();
 					fwm.addEffect(effect);
 					int rp = random.nextInt(2) + 1;
 					fwm.setPower(rp);
