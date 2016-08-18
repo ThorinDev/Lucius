@@ -42,22 +42,22 @@ public class VanishCommand implements CommandExecutor, Listener {
 			Boolean isVanishEnabled = plugin.getConfig().getBoolean("commands.vanish");
 			if(isVanishEnabled == true) {
 				if(player.hasPermission("lucius.vanish")) {
-				if (!vanished.contains(player)) {
-                          for (Player pl : Bukkit.getServer().getOnlinePlayers()) {
-                                  pl.hidePlayer(player);
-                          }
-                          vanished.add(player);
-                          player.sendMessage(ChatColor.GREEN + "You have been vanished!");
-                          return true;
-                  }
-                  else {
-                          for (Player pl : Bukkit.getServer().getOnlinePlayers()) {
-                                  pl.showPlayer(player);
-                          }
-                          vanished.remove(player);
-                          player.sendMessage(ChatColor.GREEN + "You have been unvanished!");
-                          return true;
-                  }
+					if (!vanished.contains(player)) {
+						for (Player pl : Bukkit.getServer().getOnlinePlayers()) {
+							pl.hidePlayer(player);
+                        }
+						vanished.add(player);
+						player.sendMessage(ChatColor.GREEN + "You have been vanished!");
+						return true;
+					}
+					else {
+						for (Player pl : Bukkit.getServer().getOnlinePlayers()) {
+							pl.showPlayer(player);
+                        }
+						vanished.remove(player);
+						player.sendMessage(ChatColor.GREEN + "You have been unvanished!");
+						return true;
+					}
 				}
 				else {
 					player.sendMessage(NPMColor);
