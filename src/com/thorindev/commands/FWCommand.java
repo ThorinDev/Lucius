@@ -147,7 +147,7 @@ public class FWCommand implements CommandExecutor {
 	}
 	private Type getType() {
 		Type type = null;
-		int i = random.nextInt(4)+1;
+		int i = random.nextInt(5)+1;
 		switch(i) {
 			case 1:
 				type = Type.BALL;
@@ -160,6 +160,9 @@ public class FWCommand implements CommandExecutor {
 				break;
 			case 4:
 				type = Type.STAR;
+				break;
+			case 5:
+				type = Type.CREEPER;
 				break;
 		}
 		return type;		
