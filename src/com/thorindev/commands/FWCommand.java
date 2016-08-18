@@ -22,6 +22,7 @@ public class FWCommand implements CommandExecutor {
 	
 	public HashMap<String, Long> cooldowns = new HashMap<String, Long>();
 	Lucius plugin;
+	Random random = new Random();
 	 
 	public FWCommand(Lucius instance) {
 		plugin = instance;
@@ -55,7 +56,7 @@ public class FWCommand implements CommandExecutor {
 			        }
 			        else {
 			        	cooldowns.put(player.getName(), System.currentTimeMillis());
-			        	Random random = new Random();
+			        	
 			        	Firework fw = (Firework) player.getWorld().spawnEntity(player.getLocation(), EntityType.FIREWORK);
 			        	FireworkMeta fwm = fw.getFireworkMeta();
 						Type t1 = getType();
@@ -83,7 +84,6 @@ public class FWCommand implements CommandExecutor {
 	}
 	private Color getColor() {
 		Color c = null;
-		Random random = new Random();
 		int i = random.nextInt(17)+1;
 		
 		switch(i) {
@@ -143,7 +143,6 @@ public class FWCommand implements CommandExecutor {
 	}
 	private Type getType() {
 		Type type = null;
-		Random random = new Random();
 		int i = random.nextInt(4)+1;
 		switch(i) {
 			case 1:
