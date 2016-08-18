@@ -57,17 +57,7 @@ public class FWCommand implements CommandExecutor {
 			        Random random = new Random();
 			        Firework fw = (Firework) player.getWorld().spawnEntity(player.getLocation(), EntityType.FIREWORK);
 					FireworkMeta fwm = fw.getFireworkMeta();
-					Random r = new Random();
-					int rt = r.nextInt(4) + 1;
-					Type type = Type.BALL;
-					if (rt == 1)
-						type = Type.BALL;
-					if (rt == 2)
-						type = Type.BALL_LARGE;
-					if (rt == 3)
-						type = Type.BURST;
-					if (rt == 4)
-						type = Type.STAR;
+					Type t1 = getType();
 					Color c1 = getColor();
 					Color c2 = getColor();
 					FireworkEffect effect = FireworkEffect.builder().flicker(r.nextBoolean()).withColor(c1).withFade(c2).with(type).trail(r.nextBoolean()).build();
