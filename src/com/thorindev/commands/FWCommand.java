@@ -147,4 +147,24 @@ public class FWCommand implements CommandExecutor {
 		}	 
 		return c;
 	}
+	private Type getType() {
+		Type type = null;
+		Random random = new Random();
+		int i = random.nextInt(4)+1;
+		switch(i) {
+			case 1:
+				type = Type.BALL;
+				break;
+			case 2:
+				type = Type.BALL_LARGE;
+				break;
+			case 3:
+				type = Type.BURST;
+				break;
+			case 4:
+				type = Type.STAR;
+				break;
+		}
+		return type;		
+	}
 }
