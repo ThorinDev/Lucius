@@ -65,7 +65,7 @@ public class FWCommand implements CommandExecutor {
 						type = Type.BALL_LARGE;
 					if (rt == 3)
 						type = Type.BURST;
-					if (rt == 5)
+					if (rt == 4)
 						type = Type.STAR;
 					Color c1 = getColor();
 					Color c2 = getColor();
