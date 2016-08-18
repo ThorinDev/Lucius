@@ -84,8 +84,7 @@ public class FWCommand implements CommandExecutor {
 	}
 	private Color getColor() {
 		Color c = null;
-		int i = random.nextInt(17)+1;
-		
+		int i = random.nextInt(17)+1;	
 		switch(i) {
 			case 1:  
 				c = Color.AQUA;
