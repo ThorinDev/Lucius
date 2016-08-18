@@ -54,6 +54,7 @@ public class FWCommand implements CommandExecutor {
 			            }
 			        }
 			        cooldowns.put(player.getName(), System.currentTimeMillis());
+			        Random random = new Random();
 			        Firework fw = (Firework) player.getWorld().spawnEntity(player.getLocation(), EntityType.FIREWORK);
 					FireworkMeta fwm = fw.getFireworkMeta();
 					Random r = new Random();
