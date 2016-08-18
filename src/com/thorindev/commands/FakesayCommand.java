@@ -38,21 +38,22 @@ public class FakesayCommand implements CommandExecutor {
 					if(args.length != 0) {
 						if(args.length != 1) {
 							Player playerToTalk = Bukkit.getPlayerExact(args[0]);
-							String Message = "";
-							for (String argument : args) {
-								Message += argument;
-								Message += " ";
-								Message = ChatColor.translateAlternateColorCodes('&', Message);
+							StringBuilder sb = new StringBuilder();
+							
+							for(int i = 1; i < args.length; i++) {
+								sb.append(args[i]).append(" ");
 							}
 							
 							if(playerToTalk != null) {
 								if(!(playerToTalk.hasPermission("lucius.fakesay.excempt"))) {
-									playerToTalk.chat(Message);
+									String allArgs = sb.toString().trim();
+									playerToTalk.chat(allArgs);
 									return true;	
 								}
 								else {
 									if(playerThatSent.hasPermission("lucius.fakesay.override")) {
-										playerToTalk.chat(Message);
+										String allArgs = sb.toString().trim();
+										playerToTalk.chat(allArgs);
 										return true;							
 									}
 									else {
