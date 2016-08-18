@@ -80,6 +80,7 @@ public class Lucius extends JavaPlugin {
 	public Permission luciusCommandLucius = new Permission("lucius.lucius");
 	
 	private void registerConfig() {
+		config.addDefault("version", "v1.9");
 		config.addDefault("commands.colorchat", true);
 		config.addDefault("commands.fakesay", true);
 		config.addDefault("commands.fw", true);
@@ -89,7 +90,12 @@ public class Lucius extends JavaPlugin {
 		config.addDefault("messages.noperm", "&cYou do not have permission to use this command");
 		config.addDefault("messages.commanddisabled", "&cCommand Disabled");
 		config.options().copyDefaults(true);
-		
+		if(config.getString("version") == "v1.9") {
+			getLogger().info("Config is up to date!");
+		}
+		else {
+			saveDefaultConfig();
+		}
 		saveConfig();
 	}
 }
