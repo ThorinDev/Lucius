@@ -53,19 +53,21 @@ public class FWCommand implements CommandExecutor {
 			                return true;
 			            }
 			        }
-			        cooldowns.put(player.getName(), System.currentTimeMillis());
-			        Random random = new Random();
-			        Firework fw = (Firework) player.getWorld().spawnEntity(player.getLocation(), EntityType.FIREWORK);
-					FireworkMeta fwm = fw.getFireworkMeta();
-					Type t1 = getType();
-					Color c1 = getColor();
-					Color c2 = getColor();
-					FireworkEffect effect = FireworkEffect.builder().flicker(random.nextBoolean()).withColor(c1).withFade(c2).with(t1).trail(random.nextBoolean()).build();
-					fwm.addEffect(effect);
-					int rp = random.nextInt(2) + 1;
-					fwm.setPower(rp);
-					fw.setFireworkMeta(fwm);
-			        return true;
+			        else {
+			        	cooldowns.put(player.getName(), System.currentTimeMillis());
+			        	Random random = new Random();
+			        	Firework fw = (Firework) player.getWorld().spawnEntity(player.getLocation(), EntityType.FIREWORK);
+			        	FireworkMeta fwm = fw.getFireworkMeta();
+						Type t1 = getType();
+						Color c1 = getColor();
+						Color c2 = getColor();
+						FireworkEffect effect = FireworkEffect.builder().flicker(random.nextBoolean()).withColor(c1).withFade(c2).with(t1).trail(random.nextBoolean()).build();
+						fwm.addEffect(effect);
+						int rp = random.nextInt(2) + 1;
+						fwm.setPower(rp);
+						fw.setFireworkMeta(fwm);
+				        return true;
+			        }
 				}
 				else {
 					player.sendMessage(NPMColor);
@@ -77,6 +79,7 @@ public class FWCommand implements CommandExecutor {
 				return true;
 			}
 		}
+		return false;
 	}
 	private Color getColor() {
 		Color c = null;
