@@ -92,6 +92,7 @@ public class Lucius extends JavaPlugin {
 		config.addDefault("messages.noperm", "&cYou do not have permission to use this command");
 		config.addDefault("messages.commanddisabled", "&cCommand Disabled");
 		config.options().copyDefaults(true);
+		
 		if(config.getString("version") == version) {
 			getLogger().info("Config is up to date!");
 		}
