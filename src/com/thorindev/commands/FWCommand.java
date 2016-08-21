@@ -21,7 +21,7 @@ import net.md_5.bungee.api.ChatColor;
 public class FWCommand implements CommandExecutor {
 	
 	public HashMap<String, Long> cooldowns = new HashMap<String, Long>();
-	Lucius plugin;
+	Lucius plugin;		
 	Random random = new Random();
 	 
 	public FWCommand(Lucius instance) {
@@ -139,7 +139,7 @@ public class FWCommand implements CommandExecutor {
 				c = Color.YELLOW;
 				break;
 			case 17:  
-				c = Color.AQUA;
+				c = Color.GRAY;
 				break;	
 		}	 
 		return c;
