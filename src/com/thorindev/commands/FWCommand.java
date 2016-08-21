@@ -106,41 +106,41 @@ public class FWCommand implements CommandExecutor {
 				c = Color.GREEN;
 				break;
 			case 6:  
-				c = Color.LIME;
-				break;
-			case 7:  
-				c = Color.MAROON;
-				break;
-			case 8:  
-				c = Color.NAVY;
-				break;
-			case 9:  
-				c = Color.OLIVE;
-				break;
-			case 10:  
-				c = Color.ORANGE;
-				break;
-			case 11:  
-				c = Color.PURPLE;
-				break;
-			case 12:  
-				c = Color.RED;
-				break;
-			case 13:  
-				c = Color.SILVER;
-				break;
-			case 14:  
-				c = Color.TEAL;
-				break;
-			case 15:  
-				c = Color.WHITE;
-				break;
-			case 16:  
-				c = Color.YELLOW;
-				break;
-			case 17:  
 				c = Color.GRAY;
 				break;	
+			case 7:  
+				c = Color.LIME;
+				break;
+			case 8:  
+				c = Color.MAROON;
+				break;
+			case 9:  
+				c = Color.NAVY;
+				break;
+			case 10:  
+				c = Color.OLIVE;
+				break;
+			case 11:  
+				c = Color.ORANGE;
+				break;
+			case 12:  
+				c = Color.PURPLE;
+				break;
+			case 13:  
+				c = Color.RED;
+				break;
+			case 14:  
+				c = Color.SILVER;
+				break;
+			case 15:  
+				c = Color.TEAL;
+				break;
+			case 16:  
+				c = Color.WHITE;
+				break;
+			case 17:  
+				c = Color.YELLOW;
+				break;
 		}	 
 		return c;
 	}
