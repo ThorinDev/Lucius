@@ -36,7 +36,6 @@ public class Lucius extends JavaPlugin {
 		getCommand("colorchat").setExecutor(new ColorChatCommand(this));
 		getCommand("fw").setExecutor(new FWCommand(this));
 		getCommand("vanish").setExecutor(new VanishCommand(this));
-		getCommand("lucius").setExecutor(new LuciusCommand(this));
 	}
 	
 	private void registerEvents() {
@@ -63,9 +62,7 @@ public class Lucius extends JavaPlugin {
 	
 	public Permission luciusCommandFW = new Permission("lucius.fw");
 	public Permission luciusCommandVanish = new Permission("lucius.vanish");
-	
-	public Permission luciusCommandLucius = new Permission("lucius.lucius");
-	
+		
 	Permission listOfPerms[] = {
 			luciusCommandFakesay,
 			luciusCommandFakesayExcempt,
@@ -78,8 +75,7 @@ public class Lucius extends JavaPlugin {
 			luciusCommandChatColorStrike,
 			luciusCommandFW,
 			luciusCommandVanish,
-			luciusCommandLucius
-		};
+	};
 	
 	private void registerConfig() {
 		config.addDefault("commands.colorchat", true);
