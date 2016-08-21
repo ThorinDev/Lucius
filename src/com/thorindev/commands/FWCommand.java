@@ -58,7 +58,7 @@ public class FWCommand implements CommandExecutor {
 			        	
 			        	Firework fw = (Firework) player.getWorld().spawnEntity(player.getLocation(), EntityType.FIREWORK);
 			        	FireworkMeta fwm = fw.getFireworkMeta();
-			        	
+
 						Type t1 = getType();
 						Color c1 = getColor();
 						Color c2 = getColor();
