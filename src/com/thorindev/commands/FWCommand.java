@@ -68,6 +68,7 @@ public class FWCommand implements CommandExecutor {
 							
 							fw.setFireworkMeta(fwm);
 							
+							player.sendMessage(ChatColor.GREEN + "Launching firework!");
 				        	cooldowns.put(player.getName(), System.currentTimeMillis());
 			            	return true;
 			            }
@@ -89,6 +90,7 @@ public class FWCommand implements CommandExecutor {
 						fwm.setPower(rp);
 						
 						fw.setFireworkMeta(fwm);
+						player.sendMessage(ChatColor.GREEN + "Launching firework!");
 				        return true;
 			        }
 				}
