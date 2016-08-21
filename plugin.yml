@@ -17,6 +17,3 @@ commands:
     aliases: [firework,launchme]
   vanish:
     usage: /vanish
-  lucius:
-    usage: /lucius
-    aliases: [lc]
