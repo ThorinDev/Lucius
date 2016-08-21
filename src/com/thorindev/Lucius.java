@@ -82,7 +82,7 @@ public class Lucius extends JavaPlugin {
 	private void registerConfig() {
 		config.addDefault("commands.colorchat", true);
 		config.addDefault("commands.fakesay", true);
-		config.addDefault("commands.fw", true);
+		config.addDefault("commands.fw", false);
 		config.addDefault("commands.fwtimeout",  15);
 		config.addDefault("commands.hello", true);
 		config.addDefault("commands.vanish", true);
