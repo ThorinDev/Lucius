@@ -26,7 +26,6 @@ public class VanishCommand implements CommandExecutor, Listener {
 		plugin = instance;
 	}
 
-
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if(!(sender instanceof Player)) {

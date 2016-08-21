@@ -18,7 +18,6 @@ public class FakesayCommand implements CommandExecutor {
 		plugin = instance;
 	}
 
-
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if(!(sender instanceof Player)) {
