@@ -1,5 +1,9 @@
 #Lucius
-A cosemetics server plugin.  
+A cosemetics server plugin.
+##Features
+ - Enable & Disable all commands
+ - Customize error messages with full colour support
+ - Almost everything is documentated
 ##Commands and Permissions
 | Command | Permission | Description |
 |--------------------------------|----------------------------------|------------------------------------------------------------------------------|
