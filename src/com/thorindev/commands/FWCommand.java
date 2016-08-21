@@ -85,7 +85,6 @@ public class FWCommand implements CommandExecutor {
 		}
 		return false;
 	}
-	
 	private Color getColor() {
 		Color c = null;
 		int i = random.nextInt(17)+1;	
