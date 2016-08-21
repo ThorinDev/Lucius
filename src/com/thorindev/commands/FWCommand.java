@@ -48,8 +48,8 @@ public class FWCommand implements CommandExecutor {
 			        if(cooldowns.containsKey(player.getName())) {
 			            long secondsLeft = ((cooldowns.get(player.getName())/1000)+cooldownTime) - (System.currentTimeMillis()/1000);
 			            if(secondsLeft > 0) {
-			                // Still cooling down
-			                player.sendMessage(ChatColor.GREEN + "You cannot use " + cmd.getName() + " for another " + secondsLeft + " seconds.");
+			                // Still cooling down		            	
+			            	player.sendMessage(ChatColor.RED + "You can only use the firework command every 15 seconds.");
 			                return true;
 			            }
 			        }
