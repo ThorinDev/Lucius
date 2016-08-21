@@ -12,7 +12,7 @@ A cosemetics server plugin.
 |  | ```lucius.chatcolor.underline``` | Allows you to make your chat underlined |
 |  | ```lucius.chatcolor.itallic``` | Allows you to make your chat itallic |
 |  | ```lucius.chatcolor.magic``` | Allows you to make your chat magical |
-|  | ```lucius.chatcolor.strike``` | Allows you to make your chat strikthrough |
+|  | ```lucius.chatcolor.strike``` | Allows you to make your chat strikethrough |
 | ```fw``` or ```firework``` or ```launchme```| ```lucius.fw``` | Allows you to spawn a firework. With a firework |
 | ```vanish``` | ```lucius.vanish```  | Allows you to vanish. Only for yourself though |
 |  |  |  |
