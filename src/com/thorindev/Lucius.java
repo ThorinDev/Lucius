@@ -98,6 +98,7 @@ public class Lucius extends JavaPlugin {
 		}
 		else {
 			saveDefaultConfig();
+			saveConfig();
 			getLogger().info("Config is out of date, updating...");
 		}
 		saveConfig();
