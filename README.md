@@ -4,9 +4,10 @@ A cosemetics server plugin.
  - Enable & Disable all commands
  - Customize error messages with full colour support
  - Almost everything is documentated
+
 ##Commands and Permissions
 | Command | Permission | Description |
-|--------------------------------|----------------------------------|------------------------------------------------------------------------------|
+|---------|------------|-------------|
 | ```hello``` or ```hi``` | ```none``` | Sends a randomized hello to the player |
 | ```fakesay``` or ```sudo``` or ```fs``` | ```lucius.fakesay``` | Allows you to make other player talk |
 |  | ```lucius.fakesay.override``` | Allows you to make excempt players talk! |
