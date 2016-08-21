@@ -46,21 +46,24 @@ public class Lucius extends JavaPlugin {
 	private void registerPermissions() {
 		PluginManager pm = getServer().getPluginManager();
 		
-		pm.addPermission(luciusCommandFakesay);
-		pm.addPermission(luciusCommandFakesayExcempt);
-		pm.addPermission(luciusCommandFakesayOverride);
-
-		pm.addPermission(luciusCommandChatColor);
-		pm.addPermission(luciusCommandChatColorBold);
-		pm.addPermission(luciusCommandChatColorUnderline);
-		pm.addPermission(luciusCommandChatColorItallic);
-		pm.addPermission(luciusCommandChatColorMagic);
-		pm.addPermission(luciusCommandChatColorStrike);
+		Permission listOfPerms[] = {
+			luciusCommandFakesay,
+			luciusCommandFakesayExcempt,
+			luciusCommandFakesayOverride,
+			luciusCommandChatColor,
+			luciusCommandChatColorBold,
+			luciusCommandChatColorUnderline,
+			luciusCommandChatColorItallic,
+			luciusCommandChatColorMagic,
+			luciusCommandChatColorStrike,
+			luciusCommandFW,
+			luciusCommandVanish,
+			luciusCommandLucius
+		};
 		
-		pm.addPermission(luciusCommandFW);
-		pm.addPermission(luciusCommandVanish);
-		
-		pm.addPermission(luciusCommandLucius);
+		for(int i = 0; i<listOfPerms.length; i++) {
+			pm.addPermission(listOfPerms[i]);
+		}
 	}
 	
 	public static Permission luciusCommandFakesay = new Permission("lucius.fakesay");
