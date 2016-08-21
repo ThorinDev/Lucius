@@ -45,22 +45,6 @@ public class Lucius extends JavaPlugin {
 	
 	private void registerPermissions() {
 		PluginManager pm = getServer().getPluginManager();
-		
-		Permission listOfPerms[] = {
-			luciusCommandFakesay,
-			luciusCommandFakesayExcempt,
-			luciusCommandFakesayOverride,
-			luciusCommandChatColor,
-			luciusCommandChatColorBold,
-			luciusCommandChatColorUnderline,
-			luciusCommandChatColorItallic,
-			luciusCommandChatColorMagic,
-			luciusCommandChatColorStrike,
-			luciusCommandFW,
-			luciusCommandVanish,
-			luciusCommandLucius
-		};
-		
 		for(int i = 0; i<listOfPerms.length; i++) {
 			pm.addPermission(listOfPerms[i]);
 		}
@@ -81,6 +65,21 @@ public class Lucius extends JavaPlugin {
 	public Permission luciusCommandVanish = new Permission("lucius.vanish");
 	
 	public Permission luciusCommandLucius = new Permission("lucius.lucius");
+	
+	Permission listOfPerms[] = {
+			luciusCommandFakesay,
+			luciusCommandFakesayExcempt,
+			luciusCommandFakesayOverride,
+			luciusCommandChatColor,
+			luciusCommandChatColorBold,
+			luciusCommandChatColorUnderline,
+			luciusCommandChatColorItallic,
+			luciusCommandChatColorMagic,
+			luciusCommandChatColorStrike,
+			luciusCommandFW,
+			luciusCommandVanish,
+			luciusCommandLucius
+		};
 	
 	private void registerConfig() {
 		config.addDefault("commands.colorchat", true);
