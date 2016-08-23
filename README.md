@@ -19,7 +19,7 @@ A cosemetics server plugin.
 |  | ```lucius.chatcolor.magic``` | Allows you to make your chat magical |
 |  | ```lucius.chatcolor.strike``` | Allows you to make your chat strikethrough |
 | ```fw``` or ```firework``` or ```launchme```| ```lucius.fw``` | Allows you to spawn a firework. With a firework timeout|
-| ```vanish``` | ```lucius.vanish```  | Allows you to vanish. Only for yourself though |
+| ```vanish``` or ```v``` or ```disappear```| ```lucius.vanish```  | Allows you to vanish. Only for yourself though |
 |  |  |  |
 |  |  |  |
 |  |  |  |
