@@ -50,7 +50,7 @@ public class Lucius extends JavaPlugin {
 	
 	public static Permission luciusCommandFakesay = new Permission("lucius.fakesay");
 	public static Permission luciusCommandFakesayOverride = new Permission("lucius.fakesay.override");
-	public static Permission luciusCommandFakesayExcempt = new Permission("lucius.fakesay.excempt");
+	public static Permission luciusCommandFakesayExempt = new Permission("lucius.fakesay.exempt");
 	
 	public Permission luciusCommandChatColor = new Permission("lucius.chatcolor");
 	public Permission luciusCommandChatColorBold = new Permission("lucius.chatcolor.bold");
