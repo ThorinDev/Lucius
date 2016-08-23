@@ -17,3 +17,4 @@ commands:
     aliases: [firework,launchme]
   vanish:
     usage: /vanish
+    aliases: [v,disappear]
