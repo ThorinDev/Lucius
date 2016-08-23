@@ -64,7 +64,7 @@ public class Lucius extends JavaPlugin {
 		
 	Permission listOfPerms[] = {
 			luciusCommandFakesay,
-			luciusCommandFakesayExcempt,
+			luciusCommandFakesayExempt,
 			luciusCommandFakesayOverride,
 			luciusCommandChatColor,
 			luciusCommandChatColorBold,
