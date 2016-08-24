@@ -67,7 +67,7 @@ public class FakesayCommand implements CommandExecutor {
 							}
 						}
 						else {
-							playerThatSent.sendMessage(ChatColor.RED + "You need to specify the message");
+							playerThatSent.sendMessage(ChatColor.RED + "You need to specify the message for the player");
 							return true;
 						}
 					}
