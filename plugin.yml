@@ -1,6 +1,7 @@
 name: Lucius
 main: com.thorindev.Lucius
 author: ThorinDev
+authors: [Thorin, ThorinDev]
 version: 2.0.0
 commands:
   hello:
