@@ -139,7 +139,7 @@ public class FWCommand implements CommandExecutor {
 			Type.CREEPER,
 			Type.STAR
 		};
-		int i = random.nextInt(5);
+		int i = random.nextInt(listOfTypes.length);
 		type = listOfTypes[i];
 		return type;		
 	}
