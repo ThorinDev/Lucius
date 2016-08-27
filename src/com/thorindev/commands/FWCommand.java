@@ -126,7 +126,7 @@ public class FWCommand implements CommandExecutor {
 			Color.WHITE,
 			Color.YELLOW
 		};
-		int i = random.nextInt(17);
+		int i = random.nextInt(listOfColors.length);
 		c = listOfColors[i];
 		return c;
 	}
