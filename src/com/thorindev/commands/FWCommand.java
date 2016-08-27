@@ -133,6 +133,9 @@ public class FWCommand implements CommandExecutor {
 	private Type getType() {
 		Type type = null;
 		int i = random.nextInt(5)+1;
+		Type[] listOfTypes = {
+				
+		};
 		switch(i) {
 			case 1:
 				type = Type.BALL;
