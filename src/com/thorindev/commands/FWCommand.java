@@ -140,23 +140,6 @@ public class FWCommand implements CommandExecutor {
 			Type.CREEPER,
 			Type.STAR
 		};
-		switch(i) {
-			case 1:
-				type = Type.BALL;
-				break;
-			case 2:
-				type = Type.BALL_LARGE;
-				break;
-			case 3:
-				type = Type.BURST;
-				break;
-			case 4:
-				type = Type.STAR;
-				break;
-			case 5:
-				type = Type.CREEPER;
-				break;
-		}
 		return type;		
 	}
 }
