@@ -132,7 +132,6 @@ public class FWCommand implements CommandExecutor {
 	}
 	private Type getType() {
 		Type type = null;
-		int i = random.nextInt(5)+1;
 		Type[] listOfTypes = {
 			Type.BALL,
 			Type.BALL_LARGE,
@@ -140,6 +139,7 @@ public class FWCommand implements CommandExecutor {
 			Type.CREEPER,
 			Type.STAR
 		};
+		int i = random.nextInt(5)+1;
 		type = listOfTypes[i];
 		return type;		
 	}
