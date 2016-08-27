@@ -140,6 +140,7 @@ public class FWCommand implements CommandExecutor {
 			Type.CREEPER,
 			Type.STAR
 		};
+		type = listOfTypes[i];
 		return type;		
 	}
 }
