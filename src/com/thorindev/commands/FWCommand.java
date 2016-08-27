@@ -107,7 +107,6 @@ public class FWCommand implements CommandExecutor {
 	}
 	private Color getColor() {
 		Color c = null;
-		int i = random.nextInt(17);
 		Color[] listOfColors = {
 			Color.AQUA,
 			Color.BLACK,
@@ -127,6 +126,7 @@ public class FWCommand implements CommandExecutor {
 			Color.WHITE,
 			Color.YELLOW
 		};
+		int i = random.nextInt(17);
 		c = listOfColors[i];
 		return c;
 	}
