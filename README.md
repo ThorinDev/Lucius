@@ -28,3 +28,4 @@ A cosemetics server plugin.
 |  |  |  |
 ##TODO
  - [x] Allow the timeout for firework to be custom.
+ - [ ] Optimize code
