@@ -40,6 +40,7 @@ public class ColorChatCommand implements CommandExecutor {
 						}
 						
 						String Message = sb.toString().trim();
+						ChatColor.translateAlternateColorCodes('&', Message);
 						
 						if(Message.contains("ChatColor.BOLD")) {
 							if(player.hasPermission("lucius.chatcolor.bold")) {
