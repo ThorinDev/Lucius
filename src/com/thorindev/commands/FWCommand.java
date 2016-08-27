@@ -134,7 +134,11 @@ public class FWCommand implements CommandExecutor {
 		Type type = null;
 		int i = random.nextInt(5)+1;
 		Type[] listOfTypes = {
-				
+			Type.BALL,
+			Type.BALL_LARGE,
+			Type.BURST,
+			Type.CREEPER,
+			Type.STAR
 		};
 		switch(i) {
 			case 1:
