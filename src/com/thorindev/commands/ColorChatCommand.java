@@ -33,14 +33,13 @@ public class ColorChatCommand implements CommandExecutor {
 			if(isChatColorEnabled == true) {
 				if(player.hasPermission("lucius.chatcolor")) {
 					if(args.length >= 1) {
-						StringBuilder sb = new StringBuilder();
 						
-						for(int i = 0; i < args.length; i++) {
-							sb.append(args[i]).append(" ");
+						String Message = "";
+						for (String argument : args) {
+							Message += argument;
+							Message += " ";
+							Message = ChatColor.translateAlternateColorCodes('&', Message);
 						}
-						
-						String Message = sb.toString().trim();
-						ChatColor.translateAlternateColorCodes('&', Message);
 						
 						if(Message.contains("ChatColor.BOLD")) {
 							if(player.hasPermission("lucius.chatcolor.bold")) {
