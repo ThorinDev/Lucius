@@ -33,7 +33,6 @@ public class ColorChatCommand implements CommandExecutor {
 			if(isChatColorEnabled == true) {
 				if(player.hasPermission("lucius.chatcolor")) {
 					if(args.length >= 1) {
-						
 						String Message = "";
 						for (String argument : args) {
 							Message += argument;
