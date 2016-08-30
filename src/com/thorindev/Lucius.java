@@ -53,11 +53,6 @@ public class Lucius extends JavaPlugin {
 	public Permission luciusCommandFakesayExempt = new Permission("lucius.fakesay.exempt");
 	
 	public Permission luciusCommandChatColor = new Permission("lucius.chatcolor");
-	public Permission luciusCommandChatColorBold = new Permission("lucius.chatcolor.bold");
-	public Permission luciusCommandChatColorUnderline = new Permission("lucius.chatcolor.underline");
-	public Permission luciusCommandChatColorItallic = new Permission("lucius.chatcolor.itallic");
-	public Permission luciusCommandChatColorMagic = new Permission("lucius.chatcolor.magic");
-	public Permission luciusCommandChatColorStrike = new Permission("lucius.chatcolor.strike");
 	
 	public Permission luciusCommandFW = new Permission("lucius.fw");
 	public Permission luciusCommandVanish = new Permission("lucius.vanish");
@@ -67,11 +62,6 @@ public class Lucius extends JavaPlugin {
 			luciusCommandFakesayExempt,
 			luciusCommandFakesayOverride,
 			luciusCommandChatColor,
-			luciusCommandChatColorBold,
-			luciusCommandChatColorUnderline,
-			luciusCommandChatColorItallic,
-			luciusCommandChatColorMagic,
-			luciusCommandChatColorStrike,
 			luciusCommandFW,
 			luciusCommandVanish,
 	};
