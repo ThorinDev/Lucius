@@ -41,61 +41,8 @@ public class ColorChatCommand implements CommandExecutor {
 							Message = ChatColor.translateAlternateColorCodes('&', Message);
 						}
 						
-						if(Message.contains("ChatColor.BOLD")) {
-							if(player.hasPermission("lucius.chatcolor.bold")) {
-								player.chat(Message);
-								return true;
-							}
-							else {
-								player.sendMessage(ChatColor.RED + "You do not have permission to use bold formatting");
-								return true;
-							}
-						}
-						else if(Message.contains("ChatColor.UNDERLINE")) {
-							if(player.hasPermission("lucius.chatcolor.underline")) {
-								player.chat(Message);
-								return true;
-							}
-							else {
-								player.sendMessage(ChatColor.RED + "You do not have permission to use underline formatting");
-								return true;
-							}
-						}
-						else if(Message.contains("ChatColor.ITALLIC")) {
-							if(player.hasPermission("lucius.chatcolor.itallic")) {
-								player.chat(Message);
-								return true;
-							}
-							else {
-								player.sendMessage(ChatColor.RED + "You do not have permission to use itallic formating");
-								return true;
-							}	
-						}
-						else if(Message.contains("ChatColor.MAGIC")){
-							if(player.hasPermission("lucius.chatcolor.magic")) {
-								player.chat(Message);
-								return true;
-							}
-							else {
-								player.sendMessage(ChatColor.RED + "You do not have permission to use magic formatting");
-								return true;
-							}
-						}
-						else if(Message.contains("ChatColor.STRIKETHROUGH")) {
-							if(player.hasPermission("lucius.chatcolor.strike")) {
-								player.chat(Message);
-								return true;
-							}
-							else {
-								player.sendMessage(ChatColor.RED + "You do not have permission to use strikethrough formatting");
-								return true;
-							}
-						}
-						else {
-							player.chat(Message);
-							return true;
-						}
-												
+						player.chat(Message);
+						return true;
 					}
 					else {
 						player.sendMessage(ChatColor.RED + "You need to say what you want to say");
