@@ -87,7 +87,9 @@ public class VanishCommand implements CommandExecutor, Listener {
 	
 	@EventHandler
 	public void onPlayerQuitVanish(PlayerQuitEvent event) {
-		vanished.remove(event.getPlayer());
+		if(vanished.contains(event.getPlayer())) {
+			vanished.remove(event.getPlayer());
+		}
 	}
 
 }
