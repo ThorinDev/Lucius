@@ -43,9 +43,8 @@ public class HelloCommand implements CommandExecutor {
 				};
 				int i = random.nextInt(HelloMessages.length);
 				a = HelloMessages[i];
-				a = a.replaceAll("%player%", player.getDisplayName());
-				String c = ChatColor.translateAlternateColorCodes('&', a);
-				player.sendMessage(c);
+				a = ChatColor.translateAlternateColorCodes('&', a.replaceAll("%player%", player.getDisplayName()));
+				player.sendMessage(a);
 			
 				return true;
 			}
