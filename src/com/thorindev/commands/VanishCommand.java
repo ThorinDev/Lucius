@@ -42,18 +42,12 @@ public class VanishCommand implements CommandExecutor, Listener {
 			if(isVanishEnabled == true) {
 				if(player.hasPermission("lucius.vanish")) {
 					if (!vanished.contains(player)) {
-						for (Player pl : Bukkit.getServer().getOnlinePlayers()) {
-							pl.hidePlayer(player);
-                        }
-						vanished.add(player);
+						VanishPlayer(player);
 						player.sendMessage(ChatColor.GREEN + "You have been vanished!");
 						return true;
 					}
 					else {
-						for (Player pl : Bukkit.getServer().getOnlinePlayers()) {
-							pl.showPlayer(player);
-                        }
-						vanished.remove(player);
+						UnVanishPlayer(player);
 						player.sendMessage(ChatColor.GREEN + "You have been unvanished!");
 						return true;
 					}
@@ -68,6 +62,20 @@ public class VanishCommand implements CommandExecutor, Listener {
 				return true;
 			}
 		}
+	}
+	
+	private void VanishPlayer(Player player) {
+		for(Player toHide : Bukkit.getServer().getOnlinePlayers()) {
+			toHide.hidePlayer(player);
+		}
+		vanished.add(player);
+	}
+	
+	private void UnVanishPlayer(Player player) {
+		for(Player toShow : Bukkit.getServer().getOnlinePlayers()) {
+			toShow.hidePlayer(player);
+		}
+		vanished.remove(player);
 	}
 	
 	@EventHandler
