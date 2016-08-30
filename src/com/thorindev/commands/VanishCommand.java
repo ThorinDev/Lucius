@@ -41,14 +41,39 @@ public class VanishCommand implements CommandExecutor, Listener {
 			Boolean isVanishEnabled = plugin.getConfig().getBoolean("commands.vanish");
 			if(isVanishEnabled == true) {
 				if(player.hasPermission("lucius.vanish")) {
-					if (!vanished.contains(player)) {
-						VanishPlayer(player);
-						player.sendMessage(ChatColor.GREEN + "You have been vanished!");
-						return true;
+					if(args.length == 0)  {
+						if(vanished.contains(player)) {
+							VanishPlayer(player);
+							player.sendMessage(ChatColor.GREEN + "You have been vanished");
+							return true;
+						}
+						else {
+							UnVanishPlayer(player);
+							player.sendMessage(ChatColor.GREEN + "You have been unvanished");
+							return true;
+						}
+					}
+					else if(args.length == 1) {
+						Player toVanish = Bukkit.getPlayerExact(args[0]);
+						if(toVanish != null) {
+							if(vanished.contains(toVanish)) {
+								VanishPlayer(toVanish);
+								toVanish.sendMessage(ChatColor.GREEN + "You have been vanished");
+								return true;
+							}
+							else {
+								UnVanishPlayer(toVanish);
+								toVanish.sendMessage(ChatColor.GREEN + "You have been unvanished");
+								return true;
+							}
+						}
+						else {
+							player.sendMessage(ChatColor.RED + "The player you specified " + args[0] + " is not online");
+							return true;
+						}
 					}
 					else {
-						UnVanishPlayer(player);
-						player.sendMessage(ChatColor.GREEN + "You have been unvanished!");
+						player.sendMessage(ChatColor.RED + "You need to specify a player");
 						return true;
 					}
 				}
@@ -64,14 +89,14 @@ public class VanishCommand implements CommandExecutor, Listener {
 		}
 	}
 	
-	private void VanishPlayer(Player player) {
+	public void VanishPlayer(Player player) {
 		for(Player toHide : Bukkit.getServer().getOnlinePlayers()) {
 			toHide.hidePlayer(player);
 		}
 		vanished.add(player);
 	}
 	
-	private void UnVanishPlayer(Player player) {
+	public void UnVanishPlayer(Player player) {
 		for(Player toShow : Bukkit.getServer().getOnlinePlayers()) {
 			toShow.showPlayer(player);
 		}
