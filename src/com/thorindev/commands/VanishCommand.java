@@ -73,7 +73,7 @@ public class VanishCommand implements CommandExecutor, Listener {
 	
 	private void UnVanishPlayer(Player player) {
 		for(Player toShow : Bukkit.getServer().getOnlinePlayers()) {
-			toShow.hidePlayer(player);
+			toShow.showPlayer(player);
 		}
 		vanished.remove(player);
 	}
