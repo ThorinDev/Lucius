@@ -33,29 +33,20 @@ public class HelloCommand implements CommandExecutor {
 			
 			if(isHelloEnabled == true) {
 				Random random = new Random();
-				
-				int RandomNumber = random.nextInt(6)+1;
-				
-				switch(RandomNumber) {
-					case 1:
-						player.sendMessage(ChatColor.GREEN + "Why hello there, " + player.getDisplayName());
-						break;
-					case 2:
-						player.sendMessage(ChatColor.GREEN + "Hi " + player.getDisplayName());
-						break;
-					case 3:
-						player.sendMessage(ChatColor.GREEN + "Peekabo " + player.getDisplayName());
-						break;
-					case 4:
-						player.sendMessage(ChatColor.GREEN + "Bonjour " + player.getDisplayName());
-						break;
-					case 5:
-						player.sendMessage(ChatColor.GREEN + "Hallo " + player.getDisplayName());
-						break;
-					case 6:
-						player.sendMessage(ChatColor.GREEN + "Hallo " + player.getDisplayName());
-						break;
-				}
+				String a;
+				String[] HelloMessages = {
+					"&aWhy hello there, %player%",
+					"&aHi %player%",
+					"&aPeekabo %player%",
+					"&aBonjour %player%",
+					"&aHallo %player%"
+				};
+				int i = random.nextInt(HelloMessages.length);
+				a = HelloMessages[i];
+				a = a.replaceAll("%player%", player.getDisplayName());
+				String c = ChatColor.translateAlternateColorCodes('&', a);
+				player.sendMessage(c);
+			
 				return true;
 			}
 			else {
