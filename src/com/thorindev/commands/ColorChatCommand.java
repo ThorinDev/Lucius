@@ -31,7 +31,7 @@ public class ColorChatCommand implements CommandExecutor {
 			String CDMColor = ChatColor.translateAlternateColorCodes('&', CommandDisabledMessage);
 			Boolean isChatColorEnabled = plugin.getConfig().getBoolean("commands.colorchat");
 			if(isChatColorEnabled == true) {
-				if(player.hasPermission("lucius.colorchat")) {
+				if(player.hasPermission("lucius.chatcolor")) {
 					if(args.length >= 1) {
 						StringBuilder sb = new StringBuilder();
 						
