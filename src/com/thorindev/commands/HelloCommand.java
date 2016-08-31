@@ -35,15 +35,15 @@ public class HelloCommand implements CommandExecutor {
 				Random random = new Random();
 				String a;
 				String[] HelloMessages = {
-					"&aWhy hello there, %player%",
-					"&aHi %player%",
-					"&aPeekabo %player%",
-					"&aBonjour %player%",
-					"&aHallo %player%"
+					"&aWhy hello there, PLAYER",
+					"&aHi PLAYER",
+					"&aPeekabo PLAYER",
+					"&aBonjour PLAYER",
+					"&aHallo PLAYER"
 				};
 				int i = random.nextInt(HelloMessages.length);
 				a = HelloMessages[i];
-				a = ChatColor.translateAlternateColorCodes('&', a.replaceAll("%player%", player.getDisplayName()));
+				a = ChatColor.translateAlternateColorCodes('&', a.replaceAll("PLAYER", player.getDisplayName()));
 				player.sendMessage(a);
 			
 				return true;
