@@ -24,3 +24,6 @@ commands:
     description: Makes you or other people fall of the face of the earth
     usage: /vanish Player
     aliases: [v,disappear]
+  lucius:
+    description: Reloads the config
+    usage: /lucius
