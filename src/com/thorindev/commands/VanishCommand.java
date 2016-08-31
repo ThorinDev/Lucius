@@ -42,7 +42,7 @@ public class VanishCommand implements CommandExecutor, Listener {
 			if(isVanishEnabled == true) {
 				if(player.hasPermission("lucius.vanish")) {
 					if(args.length == 0)  {
-						if(vanished.contains(player)) {
+						if(!vanished.contains(player)) {
 							VanishPlayer(player);
 							player.sendMessage(ChatColor.GREEN + "You have been vanished");
 							return true;
@@ -56,7 +56,7 @@ public class VanishCommand implements CommandExecutor, Listener {
 					else if(args.length == 1) {
 						Player toVanish = Bukkit.getPlayerExact(args[0]);
 						if(toVanish != null) {
-							if(vanished.contains(toVanish)) {
+							if(!vanished.contains(toVanish)) {
 								VanishPlayer(toVanish);
 								toVanish.sendMessage(ChatColor.GREEN + "You have been vanished");
 								return true;
