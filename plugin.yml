@@ -22,5 +22,5 @@ commands:
     aliases: [firework,launchme,explode]
   vanish:
     description: Makes you or other people fall of the face of the earth
-    usage: /vanish
+    usage: /vanish Player
     aliases: [v,disappear]
