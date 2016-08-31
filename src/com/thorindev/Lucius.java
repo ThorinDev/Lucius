@@ -53,6 +53,8 @@ public class Lucius extends JavaPlugin {
 	
 	public Permission luciusCommandFW = new Permission("lucius.fw");
 	public Permission luciusCommandVanish = new Permission("lucius.vanish");
+	
+	public Permission luciusCommandLucius = new Permission("lucius.lucius");
 		
 	Permission listOfPerms[] = {
 			luciusCommandFakesay,
@@ -61,6 +63,7 @@ public class Lucius extends JavaPlugin {
 			luciusCommandChatColor,
 			luciusCommandFW,
 			luciusCommandVanish,
+			luciusCommandLucius
 	};
 	
 	private void registerConfig() {
