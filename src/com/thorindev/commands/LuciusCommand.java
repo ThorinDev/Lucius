@@ -30,6 +30,7 @@ public class LuciusCommand implements CommandExecutor {
 			if(player.hasPermission("lucius.lucius")) {
 				if(args.length == 0) {
 					player.sendMessage(ChatColor.RED + "You have used too few arguments");
+					return true;
 				}
 				else {
 					if(args[0].equalsIgnoreCase("reload")) {
@@ -48,7 +49,6 @@ public class LuciusCommand implements CommandExecutor {
 				return true;
 			}
 		}
-		return false;
 	}
 
 }
