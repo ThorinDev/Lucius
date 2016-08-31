@@ -73,7 +73,7 @@ public class VanishCommand implements CommandExecutor, Listener {
 						}
 					}
 					else {
-						player.sendMessage(ChatColor.RED + "You need to specify a player");
+						player.sendMessage(ChatColor.RED + "You have used too many arguments");
 						return true;
 					}
 				}
