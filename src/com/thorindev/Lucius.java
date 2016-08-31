@@ -19,6 +19,7 @@ public class Lucius extends JavaPlugin {
 		registerCommands();
 		registerEvents();
 		registerPermissions();
+		registerConfig();	
 	}
 	
 	@Override
