@@ -5,11 +5,7 @@ import org.bukkit.permissions.Permission;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.thorindev.commands.ColorChatCommand;
-import com.thorindev.commands.FWCommand;
-import com.thorindev.commands.FakesayCommand;
-import com.thorindev.commands.HelloCommand;
-import com.thorindev.commands.VanishCommand;
+import com.thorindev.commands.*;
 
 public class Lucius extends JavaPlugin {
 	
@@ -23,7 +19,6 @@ public class Lucius extends JavaPlugin {
 		registerCommands();
 		registerEvents();
 		registerPermissions();
-		registerConfig();
 	}
 	
 	@Override
