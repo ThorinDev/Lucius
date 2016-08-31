@@ -5,17 +5,22 @@ authors: [Thorin, ThorinDev]
 version: 2.0.5
 commands:
   hello:
+    description: Sends a random hello message back to the player
     usage: /hello
     aliases: [hi,hey]
   fakesay:
+    description: Makes other players talk or issue commands, use with care
     usage: /fakesay Player Message
     aliases: [sudo,fs]
   colorchat:
+    description: Who doesn't like colours in their chat
     usage: /colorchat Message
     aliases: [cc,colourchat]
   fw:
+    description: Kabooom
     usage: /fw
     aliases: [firework,launchme,explode]
   vanish:
+    description: Makes you or other people fall of the face of the earth
     usage: /vanish
     aliases: [v,disappear]
