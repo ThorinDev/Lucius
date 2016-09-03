@@ -129,7 +129,7 @@ public class FWCommand implements CommandExecutor {
 		return c;
 	}
 	private Type getType() {
-		Type type = null;
+		Type t = null;
 		Type[] listOfTypes = {
 			Type.BALL,
 			Type.BALL_LARGE,
@@ -138,8 +138,8 @@ public class FWCommand implements CommandExecutor {
 			Type.STAR
 		};
 		int i = random.nextInt(listOfTypes.length);
-		type = listOfTypes[i];
-		return type;		
+		t = listOfTypes[i];
+		return t;		
 	}
 	private int getPower() {
 		int p = 0;
