@@ -59,7 +59,6 @@ public class FWCommand implements CommandExecutor {
 							Type t1 = getType();
 							Color c1 = getColor();
 							Color c2 = getColor();
-							
 							FireworkEffect effect = FireworkEffect.builder().flicker(random.nextBoolean()).withColor(c1).withFade(c2).with(t1).trail(random.nextBoolean()).build();
 							fwm.addEffect(effect);
 							
@@ -82,12 +81,11 @@ public class FWCommand implements CommandExecutor {
 						Type t1 = getType();
 						Color c1 = getColor();
 						Color c2 = getColor();
+						int p1 = getPower();
 						
 						FireworkEffect effect = FireworkEffect.builder().flicker(random.nextBoolean()).withColor(c1).withFade(c2).with(t1).trail(random.nextBoolean()).build();
 						fwm.addEffect(effect);
-						
-						int rp = random.nextInt(2) + 1;
-						fwm.setPower(rp);
+						fwm.setPower(p1);
 						
 						fw.setFireworkMeta(fwm);
 						player.sendMessage(ChatColor.GREEN + "Launching firework!");
@@ -142,5 +140,15 @@ public class FWCommand implements CommandExecutor {
 		int i = random.nextInt(listOfTypes.length);
 		type = listOfTypes[i];
 		return type;		
+	}
+	private int getPower() {
+		int p = 0;
+		int[] listOfPowers = {
+			1,
+			2
+		};
+		int i = random.nextInt(listOfPowers.length);
+		p = listOfPowers[i];
+		return p;
 	}
 }
