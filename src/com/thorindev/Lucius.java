@@ -1,24 +1,28 @@
 package com.thorindev;
 
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.permissions.Permission;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.thorindev.commands.*;
+import com.thorindev.commands.ColorChatCommand;
+import com.thorindev.commands.FWCommand;
+import com.thorindev.commands.FakesayCommand;
+import com.thorindev.commands.HelloCommand;
+import com.thorindev.commands.VanishCommand;
 
 public class Lucius extends JavaPlugin {
 	
 	PluginManager pm = getServer().getPluginManager();
 	final FileConfiguration config = this.getConfig();
+	static LuciusPermissions LuciusPermissions = new LuciusPermissions();
 	
 	@Override
 	public void onEnable() {
 		getLogger().info("Lucius Made By ThorinDev");
 		
+		LuciusPermissions.registerPermissions();
 		registerCommands();
 		registerEvents();
-		registerPermissions();
 		registerConfig();	
 	}
 	
@@ -37,33 +41,6 @@ public class Lucius extends JavaPlugin {
 		pm.registerEvents(new VanishCommand(this), this);
 	}
 	
-	private void registerPermissions() {
-		PluginManager pm = getServer().getPluginManager();
-		for(int i = 0; i<listOfPerms.length; i++) {
-			pm.addPermission(listOfPerms[i]);
-		}
-	}
-	
-	public Permission luciusCommandFakesay = new Permission("lucius.fakesay");
-	public Permission luciusCommandFakesayOverride = new Permission("lucius.fakesay.override");
-	public Permission luciusCommandFakesayExempt = new Permission("lucius.fakesay.exempt");
-	
-	public Permission luciusCommandChatColor = new Permission("lucius.chatcolor"); 
-	
-	public Permission luciusCommandFW = new Permission("lucius.fw");
-	public Permission luciusCommandVanish = new Permission("lucius.vanish");
-	
-	public Permission luciusCommandLucius = new Permission("lucius.lucius");
-		
-	Permission listOfPerms[] = {
-			luciusCommandFakesay,
-			luciusCommandFakesayExempt,
-			luciusCommandFakesayOverride,
-			luciusCommandChatColor,
-			luciusCommandFW,
-			luciusCommandVanish,
-			luciusCommandLucius
-	};
 	
 	private void registerConfig() {
 		config.options().header(
