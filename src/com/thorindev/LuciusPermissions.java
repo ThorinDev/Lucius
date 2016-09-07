@@ -17,7 +17,7 @@ public class LuciusPermissions {
 	
 	public Permission luciusCommandLucius = new Permission("lucius.lucius");
 		
-	Permission listOfPerms[] = {
+	Permission[] listOfPerms = {
 			luciusCommandFakesay,
 			luciusCommandFakesayExempt,
 			luciusCommandFakesayOverride,
