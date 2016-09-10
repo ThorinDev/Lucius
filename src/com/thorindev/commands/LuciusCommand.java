@@ -19,36 +19,23 @@ public class LuciusCommand implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-		if(!(sender instanceof Player)) {
-			sender.sendMessage(ChatColor.RED + "You need to be a player to use the command, " + ChatColor.GREEN + "/" + cmd.getName().toString());
-			return true;
-		}
-		else {
-			Player player = (Player) sender;
-			String NoPermissionMessage = plugin.getConfig().getString("messages.noperm");
-			String NPMColor = ChatColor.translateAlternateColorCodes('&', NoPermissionMessage);
-			if(player.hasPermission("lucius.lucius")) {
-				if(args.length == 0) {
-					player.sendMessage(ChatColor.RED + "You have used too few arguments");
-					return true;
-				}
-				else {
-					if(args[0].equalsIgnoreCase("reload")) {
-						plugin.reloadConfig();
-						player.sendMessage(ChatColor.GREEN + "Config reloaded");
-						return true;
-					}
-					else {
-						player.sendMessage(ChatColor.RED + "You need to use /lucius reload");
-						return true;
-					}
-				}
+		Player player = (Player) sender;
+		String NoPermissionMessage = plugin.getConfig().getString("messages.noperm");
+		String NPMColor = ChatColor.translateAlternateColorCodes('&', NoPermissionMessage);
+		if(player.hasPermission("lucius.lucius")) {
+			if(args[0].equalsIgnoreCase("reload")) {
+				plugin.reloadConfig();
+				player.sendMessage(ChatColor.GREEN + "Reloaded the config!");
+				return true;
 			}
 			else {
-				player.sendMessage(NPMColor);
+				player.sendMessage(ChatColor.RED + "Unknown argument");
 				return true;
 			}
 		}
+		else {
+			player.sendMessage(NPMColor);
+			return true;
+		}
 	}
-
 }
