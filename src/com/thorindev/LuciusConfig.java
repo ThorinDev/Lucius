@@ -1,5 +1,6 @@
 package com.thorindev;
 
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 
 public class LuciusConfig {
@@ -12,6 +13,7 @@ public class LuciusConfig {
 
 	public void registerConfig() {
 		FileConfiguration config = plugin.config;
+		Bukkit.getLogger().info("Succesfully accessed the config.");
 		config.options().header(
 				"Lucius \n" +
 				"All commands can be disbaled and enabled, as well as changing other things such as the firework timeout \n" +
