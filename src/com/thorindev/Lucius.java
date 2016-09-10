@@ -8,6 +8,7 @@ import com.thorindev.commands.ColorChatCommand;
 import com.thorindev.commands.FWCommand;
 import com.thorindev.commands.FakesayCommand;
 import com.thorindev.commands.HelloCommand;
+import com.thorindev.commands.LuciusCommand;
 import com.thorindev.commands.VanishCommand;
 
 public class Lucius extends JavaPlugin {
@@ -36,6 +37,7 @@ public class Lucius extends JavaPlugin {
 		getCommand("colorchat").setExecutor(new ColorChatCommand(this));
 		getCommand("fw").setExecutor(new FWCommand(this));
 		getCommand("vanish").setExecutor(new VanishCommand(this));
+		getCommand("lucius").setExecutor(new LuciusCommand(this));
 	}
 	
 	private void registerEvents() {
