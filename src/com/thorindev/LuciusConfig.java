@@ -29,14 +29,10 @@ public class LuciusConfig {
 		config.addDefault("messages.commanddisabled", "&cCommand Disabled");
 		config.options().copyDefaults(true);
 		config.options().copyHeader(true);
-		saveConfig();
-		
+		saveConfig();	
 	}
 
 	private void saveConfig() {
 		plugin.saveConfig();
 	}
-	
-    
-
 }
