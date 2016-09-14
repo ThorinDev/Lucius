@@ -15,7 +15,7 @@ public class Lucius extends JavaPlugin {
 	
 	PluginManager pm = getServer().getPluginManager();
 	final FileConfiguration config = this.getConfig();
-	LuciusPermissions LuciusPermissions = new LuciusPermissions();
+	LuciusPermissions LuciusPermissions = new LuciusPermissions(this);
 	LuciusConfig LuciusConfig = new LuciusConfig(this);
 	
 	@Override

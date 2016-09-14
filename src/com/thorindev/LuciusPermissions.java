@@ -6,6 +6,12 @@ import org.bukkit.plugin.PluginManager;
 
 public class LuciusPermissions {
 	
+	Lucius plugin;
+	 
+	public LuciusPermissions(Lucius instance) {
+		plugin = instance;
+	}
+	
 	public Permission luciusCommandFakesay = new Permission("lucius.fakesay");
 	public Permission luciusCommandFakesayOverride = new Permission("lucius.fakesay.override");
 	public Permission luciusCommandFakesayExempt = new Permission("lucius.fakesay.exempt");
