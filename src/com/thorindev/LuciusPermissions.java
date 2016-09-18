@@ -31,7 +31,7 @@ public class LuciusPermissions {
 	};
 	
 	public void registerPermissions() {
-		Bukkit.getLogger().info("Succesfully accessed the permissions.");
+		Bukkit.getLogger().info("Succesfully accessed the permission class and adding the permissions.");
 		PluginManager pm = Bukkit.getServer().getPluginManager();
 		for(int i = 0; i<listOfPerms.length; i++) {
 			pm.addPermission(listOfPerms[i]);

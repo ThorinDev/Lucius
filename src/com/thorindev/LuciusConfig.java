@@ -13,7 +13,7 @@ public class LuciusConfig {
 
 	public void registerConfig() {
 		FileConfiguration config = plugin.config;
-		Bukkit.getLogger().info("Succesfully accessed the config.");
+		Bukkit.getLogger().info("Succesfully accessed the config class and adding the config.");
 		config.options().header(
 				"Lucius \n" +
 				"All commands can be disbaled and enabled, as well as changing other things such as the firework timeout \n" +
