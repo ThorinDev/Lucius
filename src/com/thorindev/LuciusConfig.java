@@ -16,7 +16,7 @@ public class LuciusConfig {
 		Bukkit.getLogger().info("Succesfully accessed the config class and adding the config.");
 		config.options().header(
 				"Lucius \n" +
-				"All commands can be disbaled and enabled, as well as changing other things such as the firework timeout \n" +
+				"All commands can be disabled and enabled, as well as changing other things such as the firework timeout \n" +
 				"You can also change messages for command disabled and no permission, with full formatting support"
 		);
 		config.addDefault("commands.colorchat", true);
