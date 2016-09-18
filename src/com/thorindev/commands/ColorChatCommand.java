@@ -50,11 +50,11 @@ public class ColorChatCommand implements CommandExecutor {
 					player.sendMessage(NPMColor);
 					return true;
 				}
-		}
-		else {
-			player.sendMessage(CDMColor);
-			return true;
+			}
+			else {
+				player.sendMessage(CDMColor);
+				return true;
+			}
 		}
 	}
-
-	}}
+}
