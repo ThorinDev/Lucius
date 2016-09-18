@@ -44,7 +44,7 @@ public class ColorChatCommand implements CommandExecutor {
 						return true;
 					}
 					else {
-						player.sendMessage(ChatColor.RED + "You need to say what you want to say");
+						player.sendMessage(ChatColor.RED + "You need to specify what you want to say");
 						return true;
 					}
 				}
