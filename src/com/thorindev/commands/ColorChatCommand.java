@@ -35,7 +35,7 @@ public class ColorChatCommand implements CommandExecutor {
 					if(args.length >= 1) {
 						StringBuilder sb = new StringBuilder();
 						for(int i = 0; i<args.length; i++) {
-							sb.append(args[i]);
+							sb.append(args[i]).append(" ");
 						}
 						String ChatColorMessage = ChatColor.translateAlternateColorCodes('&', sb.toString());
 						player.chat(ChatColorMessage);
