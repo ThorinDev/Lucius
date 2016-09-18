@@ -33,14 +33,12 @@ public class ColorChatCommand implements CommandExecutor {
 			if(isChatColorEnabled == true) {
 				if(player.hasPermission("lucius.chatcolor")) {
 					if(args.length >= 1) {
-						String Message = "";
-						for (String argument : args) {
-							Message += argument;
-							Message += " ";
-							Message = ChatColor.translateAlternateColorCodes('&', Message);
+						StringBuilder sb = new StringBuilder();
+						for(int i = 0; i<args.length; i++) {
+							sb.append(args[i]);
 						}
-						
-						player.chat(Message);
+						String ChatColorMessage = ChatColor.translateAlternateColorCodes('&', sb.toString());
+						player.chat(ChatColorMessage);
 						return true;
 					}
 					else {
@@ -59,4 +57,4 @@ public class ColorChatCommand implements CommandExecutor {
 		}
 	}
 
-}}
+	}}
