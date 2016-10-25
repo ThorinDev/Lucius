@@ -41,6 +41,6 @@ public class Lucius extends JavaPlugin {
 	
 	private void registerEvents() {
 		pm.registerEvents(new VanishCommand(this), this);
-		pm.registerEvents(new ChatColorListener(), this);
+		pm.registerEvents(new ChatColorListener(this), this);
 	}
 }
