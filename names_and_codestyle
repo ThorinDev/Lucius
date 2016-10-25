@@ -1,4 +1,4 @@
 p = Player
 e = Event
 
-if something is meant to be true it will be coded at 'if(test == true)' rather 'if(test)'
+if something is meant to be true it will be coded as 'if(test)' rather 'if(test == true)'
