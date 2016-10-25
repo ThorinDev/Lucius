@@ -15,15 +15,13 @@ public class Lucius extends JavaPlugin {
 	
 	PluginManager pm = getServer().getPluginManager();
 	final FileConfiguration config = this.getConfig();
-	LuciusPermissions LuciusPermissions = new LuciusPermissions(this);
-	LuciusConfig LuciusConfig = new LuciusConfig(this);
+	LuciusSubroutines ls = new LuciusSubroutines(this);
 	
 	@Override
 	public void onEnable() {
 		getLogger().info("Lucius Made By ThorinDev");
 		
-		LuciusPermissions.registerPermissions();
-		LuciusConfig.registerConfig();
+		ls.doStuff(); //calls all the subroutines in that class
 		registerCommands();
 		registerEvents();
 	}
