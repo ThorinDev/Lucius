@@ -33,18 +33,16 @@ public class ColorChatCommand implements CommandExecutor {
 			if(isChatColorEnabled == true) {
 				if(player.hasPermission("lucius.chatcolor")) {
 					if(args.length >= 1) {
-						String Message = "";
-						for (String argument : args) {
-							Message += argument;
-							Message += " ";
-							Message = ChatColor.translateAlternateColorCodes('&', Message);
+						StringBuilder sb = new StringBuilder();
+						for(int i = 0; i<args.length; i++) {
+							sb.append(args[i]).append(" ");
 						}
-						
-						player.chat(Message);
+						String ChatColorMessage = ChatColor.translateAlternateColorCodes('&', sb.toString());
+						player.chat(ChatColorMessage);
 						return true;
 					}
 					else {
-						player.sendMessage(ChatColor.RED + "You need to say what you want to say");
+						player.sendMessage(ChatColor.RED + "You need to specify what you want to say");
 						return true;
 					}
 				}
@@ -52,11 +50,11 @@ public class ColorChatCommand implements CommandExecutor {
 					player.sendMessage(NPMColor);
 					return true;
 				}
-		}
-		else {
-			player.sendMessage(CDMColor);
-			return true;
+			}
+			else {
+				player.sendMessage(CDMColor);
+				return true;
+			}
 		}
 	}
-
-}}
+}
