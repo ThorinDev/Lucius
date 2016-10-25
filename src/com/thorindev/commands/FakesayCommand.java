@@ -23,16 +23,15 @@ public class FakesayCommand implements CommandExecutor {
 		if(!(sender instanceof Player)) {
 			sender.sendMessage(ChatColor.RED + "You need to be a player to use the command, " + ChatColor.GREEN + "/" + cmd.getName().toString());
 			return true;
-		}
-		else {
+		} else {
 			Player playerThatSent = (Player) sender;
 			String NoPermissionMessage = plugin.getConfig().getString("messages.noperm");
 			String NPMColor = ChatColor.translateAlternateColorCodes('&', NoPermissionMessage);
 			String CommandDisabledMessage = plugin.getConfig().getString("messages.commanddisabled");
 			String CDMColor = ChatColor.translateAlternateColorCodes('&', CommandDisabledMessage);
-			Boolean isFakesayEnabled = plugin.getConfig().getBoolean("commands.fakesay");
+			boolean isFakesayEnabled = plugin.getConfig().getBoolean("commands.fakesay");
 
-			if(isFakesayEnabled == true) {
+			if(isFakesayEnabled) {
 				if(playerThatSent.hasPermission("lucius.fakesay")) {
 					if(args.length != 0) {
 						if(args.length != 1) {
@@ -49,39 +48,32 @@ public class FakesayCommand implements CommandExecutor {
 								if(!(playerToTalk.hasPermission("lucius.fakesay.excempt"))) {
 									playerToTalk.chat(Message);
 									return true;	
-								}
-								else {
+								} else {
 									if(playerThatSent.hasPermission("lucius.fakesay.override")) {
 										playerToTalk.chat(Message);
 										return true;							
-									}
-									else {
+									} else {
 										playerThatSent.sendMessage(ChatColor.RED + "Sorry you can't make that person talk!");
 										return true;
 									}
 								}
-							}
-							else {
+							} else {
 								playerThatSent.sendMessage(ChatColor.RED + "The player you specified " + args[0] + " is not online");
 								return true;
 							}
-						}
-						else {
+						} else {
 							playerThatSent.sendMessage(ChatColor.RED + "You need to specify the message for the player");
 							return true;
 						}
-					}
-					else {
+					} else {
 						playerThatSent.sendMessage(ChatColor.RED + "You need to specify the player and the message");
 						return true;
 					}
-				}
-				else {
+				} else {
 					playerThatSent.sendMessage(NPMColor);
 					return true;
 				}
-			}
-			else {
+			} else {
 				playerThatSent.sendMessage(CDMColor);
 				return true;
 			}

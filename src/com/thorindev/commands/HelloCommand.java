@@ -24,14 +24,13 @@ public class HelloCommand implements CommandExecutor {
 		if(!(sender instanceof Player)) {
 			sender.sendMessage(ChatColor.RED + "You need to be a player to use the command, " + ChatColor.GREEN + "/" + cmd.getName().toString());
 			return true;
-		}
-		else {
+		} else {
 			Player player = (Player) sender;
 			String CommandDisabledMessage = plugin.getConfig().getString("messages.commanddisabled");
 			String CDMColor = ChatColor.translateAlternateColorCodes('&', CommandDisabledMessage);
 			Boolean isHelloEnabled = plugin.getConfig().getBoolean("commands.hello");
 			
-			if(isHelloEnabled == true) {
+			if(isHelloEnabled) {
 				Random random = new Random();
 				String a;
 				String[] HelloMessages = {

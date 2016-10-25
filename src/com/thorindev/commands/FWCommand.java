@@ -21,8 +21,9 @@ import net.md_5.bungee.api.ChatColor;
 public class FWCommand implements CommandExecutor {
 	
 	public HashMap<String, Long> cooldowns = new HashMap<String, Long>();
-	Lucius plugin;
 	Random random = new Random();
+	
+	Lucius plugin;
 	 
 	public FWCommand(Lucius instance) {
 		plugin = instance;
@@ -41,8 +42,9 @@ public class FWCommand implements CommandExecutor {
 			String CommandDisabledMessage = plugin.getConfig().getString("messages.commanddisabled");
 			String CDMColor = ChatColor.translateAlternateColorCodes('&', CommandDisabledMessage);
 			int FWTimeout = plugin.getConfig().getInt("commands.fwtimeout");
-			Boolean isFWEnabled = plugin.getConfig().getBoolean("commands.fw");
-			if(isFWEnabled == true) {
+			boolean isFWEnabled = plugin.getConfig().getBoolean("commands.fw");
+			
+			if(isFWEnabled) {
 				if(player.hasPermission("lucius.fw")) {
 					int cooldownTime = FWTimeout;
 			        if(cooldowns.containsKey(player.getName())) {
@@ -51,8 +53,7 @@ public class FWCommand implements CommandExecutor {
 			                // Still cooling down		            	
 			            	player.sendMessage(ChatColor.RED + "You need to wait another " + secondsLeft + " second(s)");
 			                return true;
-			            }
-			            else {			            	
+			            } else {			            	
 				        	Firework fw = (Firework) player.getWorld().spawnEntity(player.getLocation(), EntityType.FIREWORK);
 				        	FireworkMeta fwm = fw.getFireworkMeta();
 
@@ -71,8 +72,7 @@ public class FWCommand implements CommandExecutor {
 				        	cooldowns.put(player.getName(), System.currentTimeMillis());
 			            	return true;
 			            }
-			        }
-			        else {
+			        } else {
 			        	cooldowns.put(player.getName(), System.currentTimeMillis());
 			        	
 			        	Firework fw = (Firework) player.getWorld().spawnEntity(player.getLocation(), EntityType.FIREWORK);
@@ -91,18 +91,17 @@ public class FWCommand implements CommandExecutor {
 						player.sendMessage(ChatColor.GREEN + "Launching firework!");
 				        return true;
 			        }
-				}
-				else {
+				} else {
 					player.sendMessage(NPMColor);
 					return true;
 				}
-			}
-			else {
+			} else {
 				player.sendMessage(CDMColor);
 				return true;
 			}
 		}
 	}
+	
 	private Color getColor() {
 		Color c = null;
 		Color[] listOfColors = {
@@ -128,6 +127,7 @@ public class FWCommand implements CommandExecutor {
 		c = listOfColors[i];
 		return c;
 	}
+	
 	private Type getType() {
 		Type t = null;
 		Type[] listOfTypes = {
@@ -141,6 +141,7 @@ public class FWCommand implements CommandExecutor {
 		t = listOfTypes[i];
 		return t;		
 	}
+	
 	private int getPower() {
 		int p = 0;
 		int[] listOfPowers = {

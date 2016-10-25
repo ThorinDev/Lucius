@@ -39,50 +39,46 @@ public class VanishCommand implements CommandExecutor, Listener {
 			String CommandDisabledMessage = plugin.getConfig().getString("messages.commanddisabled");
 			String CDMColor = ChatColor.translateAlternateColorCodes('&', CommandDisabledMessage);
 			Boolean isVanishEnabled = plugin.getConfig().getBoolean("commands.vanish");
-			if(isVanishEnabled == true) {
+			
+			if(isVanishEnabled) {
 				if(player.hasPermission("lucius.vanish")) {
 					if(args.length == 0)  {
 						if(!vanished.contains(player)) {
 							VanishPlayer(player);
 							player.sendMessage(ChatColor.GREEN + "You have been vanished");
 							return true;
-						}
-						else {
+						} else {
 							UnVanishPlayer(player);
 							player.sendMessage(ChatColor.GREEN + "You have been unvanished");
 							return true;
 						}
-					}
-					else if(args.length == 1) {
+					} else if(args.length == 1) {
 						Player toVanish = Bukkit.getPlayerExact(args[0]);
 						if(toVanish != null) {
 							if(!vanished.contains(toVanish)) {
 								VanishPlayer(toVanish);
 								toVanish.sendMessage(ChatColor.GREEN + "You have been vanished");
+								player.sendMessage(ChatColor.GREEN + "You have vanished " + toVanish);
 								return true;
-							}
-							else {
+							} else {
 								UnVanishPlayer(toVanish);
 								toVanish.sendMessage(ChatColor.GREEN + "You have been unvanished");
+								player.sendMessage(ChatColor.GREEN + "You have unvanished " + toVanish);
 								return true;
 							}
-						}
-						else {
-							player.sendMessage(ChatColor.RED + "The player you specified " + args[0] + " is not online");
+						} else {
+							player.sendMessage(ChatColor.RED + "The player you specified " + toVanish + " is not online");
 							return true;
 						}
-					}
-					else {
+					} else {
 						player.sendMessage(ChatColor.RED + "You have used too many arguments");
 						return true;
 					}
-				}
-				else {
+				} else {
 					player.sendMessage(NPMColor);
 					return true;
 				}
-			}
-			else {
+			} else {
 				player.sendMessage(CDMColor);
 				return true;
 			}
