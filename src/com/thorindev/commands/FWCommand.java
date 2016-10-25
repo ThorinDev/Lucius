@@ -44,7 +44,7 @@ public class FWCommand implements CommandExecutor {
 			int FWTimeout = plugin.getConfig().getInt("commands.fwtimeout");
 			boolean isFWEnabled = plugin.getConfig().getBoolean("commands.fw");
 			
-			if(isFWEnabled == true) {
+			if(isFWEnabled) {
 				if(player.hasPermission("lucius.fw")) {
 					int cooldownTime = FWTimeout;
 			        if(cooldowns.containsKey(player.getName())) {
@@ -127,6 +127,7 @@ public class FWCommand implements CommandExecutor {
 		c = listOfColors[i];
 		return c;
 	}
+	
 	private Type getType() {
 		Type t = null;
 		Type[] listOfTypes = {
@@ -140,6 +141,7 @@ public class FWCommand implements CommandExecutor {
 		t = listOfTypes[i];
 		return t;		
 	}
+	
 	private int getPower() {
 		int p = 0;
 		int[] listOfPowers = {

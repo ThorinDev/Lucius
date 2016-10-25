@@ -22,18 +22,17 @@ public class LuciusCommand implements CommandExecutor {
 		Player player = (Player) sender;
 		String NoPermissionMessage = plugin.getConfig().getString("messages.noperm");
 		String NPMColor = ChatColor.translateAlternateColorCodes('&', NoPermissionMessage);
+		
 		if(player.hasPermission("lucius.lucius")) {
 			if(args[0].equalsIgnoreCase("reload")) {
 				plugin.reloadConfig();
 				player.sendMessage(ChatColor.GREEN + "Reloaded the config!");
 				return true;
-			}
-			else {
+			} else {
 				player.sendMessage(ChatColor.RED + "Unknown argument");
 				return true;
 			}
-		}
-		else {
+		} else {
 			player.sendMessage(NPMColor);
 			return true;
 		}

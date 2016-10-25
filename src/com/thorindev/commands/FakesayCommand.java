@@ -31,7 +31,7 @@ public class FakesayCommand implements CommandExecutor {
 			String CDMColor = ChatColor.translateAlternateColorCodes('&', CommandDisabledMessage);
 			boolean isFakesayEnabled = plugin.getConfig().getBoolean("commands.fakesay");
 
-			if(isFakesayEnabled == true) {
+			if(isFakesayEnabled) {
 				if(playerThatSent.hasPermission("lucius.fakesay")) {
 					if(args.length != 0) {
 						if(args.length != 1) {

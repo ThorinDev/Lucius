@@ -26,7 +26,7 @@ public class ChatColorListener implements Listener {
 		Player player = e.getPlayer();
 		String m = e.getMessage();
 		
-		if(isChatColorEnabled == true) {
+		if(isChatColorEnabled) {
 			if(player.hasPermission("lucius.chatcolor")) {
 				if(m.contains("&")) {
 					e.setCancelled(true);
