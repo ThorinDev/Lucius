@@ -33,7 +33,7 @@ public class LuciusSubroutines {
 		config.addDefault("commands.fwtimeout",  15);
 		config.addDefault("commands.hello", true);
 		config.addDefault("commands.vanish", true);
-		config.addDefault("messages.noperm", "&cYou do not have permission to use this.plugin command");
+		config.addDefault("messages.noperm", "&cYou do not have permission to use this command");
 		config.addDefault("messages.commanddisabled", "&cCommand Disabled");
 		config.options().copyDefaults(true);
 		config.options().copyHeader(true);
