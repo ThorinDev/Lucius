@@ -10,6 +10,7 @@ import com.thorindev.commands.FakesayCommand;
 import com.thorindev.commands.HelloCommand;
 import com.thorindev.commands.LuciusCommand;
 import com.thorindev.commands.VanishCommand;
+import com.thorindev.listeners.ChatColorListener;
 
 public class Lucius extends JavaPlugin {
 	
@@ -40,5 +41,6 @@ public class Lucius extends JavaPlugin {
 	
 	private void registerEvents() {
 		pm.registerEvents(new VanishCommand(this), this);
+		pm.registerEvents(new ChatColorListener(), this);
 	}
 }
