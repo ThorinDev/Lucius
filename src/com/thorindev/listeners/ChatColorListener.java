@@ -34,7 +34,7 @@ public class ChatColorListener implements Listener {
 				}
 			}
 		} else {
-			player.sendMessage("");
+			player.sendMessage(CDMColor);
 		}
 	}
 	
