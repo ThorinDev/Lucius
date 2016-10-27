@@ -49,6 +49,7 @@ public class LuciusSubroutines {
 	public Permission luciusCommandFakesayExempt = new Permission("lucius.fakesay.exempt");
 	public Permission luciusCommandChatColor = new Permission("lucius.chatcolor"); 
 	public Permission luciusCommandFW = new Permission("lucius.fw");
+	public Permission luciusCommandFWNoTimeout = new Permission("lucius.fw.notimeout");
 	public Permission luciusCommandVanish = new Permission("lucius.vanish");
 	public Permission luciusCommandLucius = new Permission("lucius.lucius");
 		
@@ -58,6 +59,7 @@ public class LuciusSubroutines {
 			luciusCommandFakesayOverride,
 			luciusCommandChatColor,
 			luciusCommandFW,
+			luciusCommandFWNoTimeout,
 			luciusCommandVanish,
 			luciusCommandLucius
 	};

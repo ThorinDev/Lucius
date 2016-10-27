@@ -47,49 +47,69 @@ public class FWCommand implements CommandExecutor {
 			if(isFWEnabled) {
 				if(player.hasPermission("lucius.fw")) {
 					int cooldownTime = FWTimeout;
-			        if(cooldowns.containsKey(player.getName())) {
-			            long secondsLeft = ((cooldowns.get(player.getName())/1000)+cooldownTime) - (System.currentTimeMillis()/1000);
-			            if(secondsLeft > 0) {
-			                // Still cooling down		            	
-			            	player.sendMessage(ChatColor.RED + "You need to wait another " + secondsLeft + " second(s)");
-			                return true;
-			            } else {			            	
-				        	Firework fw = (Firework) player.getWorld().spawnEntity(player.getLocation(), EntityType.FIREWORK);
-				        	FireworkMeta fwm = fw.getFireworkMeta();
-
-							Type t1 = getType();
-							Color c1 = getColor();
-							Color c2 = getColor();
-							FireworkEffect effect = FireworkEffect.builder().flicker(random.nextBoolean()).withColor(c1).withFade(c2).with(t1).trail(random.nextBoolean()).build();
-							fwm.addEffect(effect);
-							
-							int rp = random.nextInt(2) + 1;
-							fwm.setPower(rp);
-							
-							fw.setFireworkMeta(fwm);
-							
-							player.sendMessage(ChatColor.GREEN + "Launching firework!");
-				        	cooldowns.put(player.getName(), System.currentTimeMillis());
-			            	return true;
-			            }
-			        } else {
-			        	cooldowns.put(player.getName(), System.currentTimeMillis());
-			        	
+			        if(player.hasPermission("lucius.fw.notimeout")) {
 			        	Firework fw = (Firework) player.getWorld().spawnEntity(player.getLocation(), EntityType.FIREWORK);
 			        	FireworkMeta fwm = fw.getFireworkMeta();
 
 						Type t1 = getType();
 						Color c1 = getColor();
 						Color c2 = getColor();
-						int p1 = getPower();
-						
 						FireworkEffect effect = FireworkEffect.builder().flicker(random.nextBoolean()).withColor(c1).withFade(c2).with(t1).trail(random.nextBoolean()).build();
 						fwm.addEffect(effect);
-						fwm.setPower(p1);
+						
+						int rp = random.nextInt(2) + 1;
+						fwm.setPower(rp);
 						
 						fw.setFireworkMeta(fwm);
+						
 						player.sendMessage(ChatColor.GREEN + "Launching firework!");
-				        return true;
+			        	cooldowns.put(player.getName(), System.currentTimeMillis());
+		            	return true;
+			        } else {
+			        	if(cooldowns.containsKey(player.getName())) {
+				            long secondsLeft = ((cooldowns.get(player.getName())/1000)+cooldownTime) - (System.currentTimeMillis()/1000);
+				            if(secondsLeft > 0) {
+				                // Still cooling down		            	
+				            	player.sendMessage(ChatColor.RED + "You need to wait another " + secondsLeft + " second(s)");
+				                return true;
+				            } else {			            	
+					        	Firework fw = (Firework) player.getWorld().spawnEntity(player.getLocation(), EntityType.FIREWORK);
+					        	FireworkMeta fwm = fw.getFireworkMeta();
+
+								Type t1 = getType();
+								Color c1 = getColor();
+								Color c2 = getColor();
+								FireworkEffect effect = FireworkEffect.builder().flicker(random.nextBoolean()).withColor(c1).withFade(c2).with(t1).trail(random.nextBoolean()).build();
+								fwm.addEffect(effect);
+								
+								int rp = random.nextInt(2) + 1;
+								fwm.setPower(rp);
+								
+								fw.setFireworkMeta(fwm);
+								
+								player.sendMessage(ChatColor.GREEN + "Launching firework!");
+					        	cooldowns.put(player.getName(), System.currentTimeMillis());
+				            	return true;
+				            }
+				        } else {
+				        	cooldowns.put(player.getName(), System.currentTimeMillis());
+				        	
+				        	Firework fw = (Firework) player.getWorld().spawnEntity(player.getLocation(), EntityType.FIREWORK);
+				        	FireworkMeta fwm = fw.getFireworkMeta();
+
+							Type t1 = getType();
+							Color c1 = getColor();
+							Color c2 = getColor();
+							int p1 = getPower();
+							
+							FireworkEffect effect = FireworkEffect.builder().flicker(random.nextBoolean()).withColor(c1).withFade(c2).with(t1).trail(random.nextBoolean()).build();
+							fwm.addEffect(effect);
+							fwm.setPower(p1);
+							
+							fw.setFireworkMeta(fwm);
+							player.sendMessage(ChatColor.GREEN + "Launching firework!");
+					        return true;
+				        }
 			        }
 				} else {
 					player.sendMessage(NPMColor);
