@@ -13,7 +13,7 @@ A cosemetics server plugin.
 |  | `lucius.fakesay.override` | Allows you to make exempt players talk |
 |  | `lucius.fakesay.exempt` | Unless the player has `lucius.fakesay.override` no one can make you talk |
 | `chatcolor` or  `cc` | `lucius.chatcolor` | Allows you to color your chat |
-| `fw` or `firework` or `launchme` or `explode`| `lucius.fw` | Allows you to spawn a firework. With a firework timeout|
+| `fw` or `firework` or `launchme` or `explode`| `lucius.fw` or `lucius.fw.notimeout` (allows you to bypass the timeout) | Allows you to spawn a firework. With a firework timeout|
 | `vanish` or `v` or `disappear`| `lucius.vanish`  | Allows you to vanish yourself or other people |
 |  |  |  |
 |  |  |  |
