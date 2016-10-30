@@ -3,7 +3,6 @@ package com.thorindev;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.permissions.Permission;
-import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 
 public class LuciusSubroutines {
@@ -19,15 +18,10 @@ public class LuciusSubroutines {
 		saveConfig();
 		registerPermissions();
 	}
-	
-	PluginDescriptionFile pdf = plugin.getDescription();
-	
 
 	public void registerConfig() {
 		FileConfiguration config = plugin.config;
 		Bukkit.getLogger().info("Succesfully accessed the config.");
-		String currentversion = pdf.getVersion();
-		config.addDefault("version", currentversion);
 		config.options().header(
 				"Lucius \n" +
 				"All commands can be disbaled and enabled, as well as changing other things such as the firework timeout \n" +
@@ -44,12 +38,6 @@ public class LuciusSubroutines {
 		config.options().copyDefaults(true);
 		config.options().copyHeader(true);
 		saveConfig();	
-		if(config.getString("version") != currentversion) {
-			Bukkit.getLogger().info("Config is out of data");
-			plugin.saveDefaultConfig();
-		} else {
-			Bukkit.getLogger().info("Your config is up to date. :)");
-		}
 	}
 
 	private void saveConfig() {
