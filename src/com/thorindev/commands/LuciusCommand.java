@@ -24,13 +24,14 @@ public class LuciusCommand implements CommandExecutor {
 		String NPMColor = ChatColor.translateAlternateColorCodes('&', NoPermissionMessage);
 		
 		if(player.hasPermission("lucius.lucius")) {
-			if(args[0].equalsIgnoreCase("reload")) {
-				plugin.reloadConfig();
-				player.sendMessage(ChatColor.GREEN + "Reloaded the config!");
-				return true;
-			} else {
-				player.sendMessage(ChatColor.RED + "Unknown argument");
-				return true;
+			switch(args[0]) {
+				case "reload":
+					plugin.reloadConfig();
+					player.sendMessage(ChatColor.GREEN + "Reloaded the config!");
+					return true;
+				default:
+					player.sendMessage(ChatColor.RED + "Unknown argument");
+					return true;
 			}
 		} else {
 			player.sendMessage(NPMColor);
