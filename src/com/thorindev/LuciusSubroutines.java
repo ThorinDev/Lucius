@@ -1,5 +1,7 @@
 package com.thorindev;
 
+import java.util.logging.Logger;
+
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.permissions.Permission;
@@ -21,7 +23,7 @@ public class LuciusSubroutines {
 
 	public void registerConfig() {
 		FileConfiguration config = plugin.config;
-		Bukkit.getLogger().info("Succesfully accessed the config.");
+		getLogger().info("Succesfully accessed the config subroutine.");
 		config.options().header(
 				"Lucius \n" +
 				"All commands can be disbaled and enabled, as well as changing other things such as the firework timeout \n" +
@@ -65,10 +67,14 @@ public class LuciusSubroutines {
 	};
 	
 	public void registerPermissions() {
-		Bukkit.getLogger().info("Succesfully accessed the permissions.");
+		getLogger().info("Succesfully accessed the permissions subroutine.");
 		PluginManager pm = Bukkit.getServer().getPluginManager();
 		for(int i = 0; i < listOfPerms.length; i++) {
 			pm.addPermission(listOfPerms[i]);
 		}
+	}
+	
+	public Logger getLogger() {
+		return plugin.getLogger();
 	}
 }
