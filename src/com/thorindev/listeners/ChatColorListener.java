@@ -19,23 +19,15 @@ public class ChatColorListener implements Listener {
 	
 	@EventHandler
 	public void onPlayerChatEvent(AsyncPlayerChatEvent e) {
-		String CommandDisabledMessage = plugin.getConfig().getString("messages.commanddisabled");
-		String CDMColor = ChatColor.translateAlternateColorCodes('&', CommandDisabledMessage);
-		Boolean isChatColorEnabled = plugin.getConfig().getBoolean("commands.colorchat");
-		
 		Player player = e.getPlayer();
 		String m = e.getMessage();
 		
-		if(isChatColorEnabled) {
-			if(player.hasPermission("lucius.chatcolor")) {
-				if(m.contains("&")) {
-					e.setCancelled(true);
-					player.chat(ChatColor.translateAlternateColorCodes('&', m));
-				}
+		if(player.hasPermission("lucius.chatcolor")) {
+			if(m.contains("&")) {
+				e.setCancelled(true);
+				player.chat(ChatColor.translateAlternateColorCodes('&', m));
 			}
-		} else {
-			player.sendMessage(CDMColor);
 		}
-	}
+	}	
 	
 }
