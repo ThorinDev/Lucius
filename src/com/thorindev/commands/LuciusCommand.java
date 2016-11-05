@@ -29,6 +29,10 @@ public class LuciusCommand implements CommandExecutor {
 					plugin.reloadConfig();
 					player.sendMessage(ChatColor.GREEN + "Reloaded the config!");
 					return true;
+				case "test":
+					player.sendMessage(ChatColor.GREEN + "Everything seems to be working");
+					player.sendMessage(ChatColor.GREEN + "If something seems broken, I am unsure what it is");
+					return true;
 				default:
 					player.sendMessage(ChatColor.RED + "Unknown argument");
 					return true;
