@@ -1,11 +1,11 @@
-#Lucius
+# Lucius
 A cosemetics server plugin.
-##Features
+## Features
  - Enable & Disable all commands
  - Customize error messages with full colour support
  - Almost everything is documentated
 
-##Commands and Permissions
+## Commands and Permissions
 | Command | Permission | Description |
 |---------|------------|-------------|
 | `hello` or `hi` | `none` | Sends a randomized hello to the player |
@@ -21,7 +21,7 @@ A cosemetics server plugin.
 |  |  |  |
 |  |  |  |
 |  |  |  |
-##TODO
+## TODO
  - [x] Allow the timeout for firework to be custom.
  - [ ] Optimize code
  - [ ] Move TODOs to github.com/ThorinDev/Lucius/issues
